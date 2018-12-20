@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  passGUI
-//
-//  Created by Sid Raval on 12/19/18.
-//  Copyright © 2018 Sid Raval. All rights reserved.
-//
-
 import SwiftGit2
 import UIKit
 
