@@ -12,6 +12,9 @@
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
 		ACCF587F21CB143600A3A83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587E21CB143600A3A83F /* Assets.xcassets */; };
 		ACCF588221CB143600A3A83F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF588021CB143600A3A83F /* LaunchScreen.storyboard */; };
+		ACCF588C21CB1C6D00A3A83F /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCF588A21CB1C6D00A3A83F /* Result.framework */; };
+		ACCF588D21CB1C6D00A3A83F /* SwiftGit2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCF588B21CB1C6D00A3A83F /* SwiftGit2.framework */; };
+		ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		ACCF587E21CB143600A3A83F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACCF588121CB143600A3A83F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACCF588321CB143600A3A83F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCF588A21CB1C6D00A3A83F /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		ACCF588B21CB1C6D00A3A83F /* SwiftGit2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGit2.framework; path = Carthage/Build/iOS/SwiftGit2.framework; sourceTree = "<group>"; };
+		ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentGit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCF588C21CB1C6D00A3A83F /* Result.framework in Frameworks */,
+				ACCF588D21CB1C6D00A3A83F /* SwiftGit2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +48,7 @@
 			children = (
 				ACCF587621CB143500A3A83F /* passGUI */,
 				ACCF587521CB143500A3A83F /* Products */,
+				ACCF588921CB1C6D00A3A83F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +63,7 @@
 		ACCF587621CB143500A3A83F /* passGUI */ = {
 			isa = PBXGroup;
 			children = (
+				ACCF588F21CB1D9D00A3A83F /* services */,
 				ACCF587721CB143500A3A83F /* AppDelegate.swift */,
 				ACCF587921CB143500A3A83F /* ViewController.swift */,
 				ACCF587B21CB143500A3A83F /* Main.storyboard */,
@@ -62,6 +72,23 @@
 				ACCF588321CB143600A3A83F /* Info.plist */,
 			);
 			path = passGUI;
+			sourceTree = "<group>";
+		};
+		ACCF588921CB1C6D00A3A83F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF588A21CB1C6D00A3A83F /* Result.framework */,
+				ACCF588B21CB1C6D00A3A83F /* SwiftGit2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACCF588F21CB1D9D00A3A83F /* services */ = {
+			isa = PBXGroup;
+			children = (
+				ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +101,7 @@
 				ACCF587021CB143500A3A83F /* Sources */,
 				ACCF587121CB143500A3A83F /* Frameworks */,
 				ACCF587221CB143500A3A83F /* Resources */,
+				ACCF588E21CB1C9000A3A83F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,11 +158,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		ACCF588E21CB1C9000A3A83F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftGit2.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftGit2.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ACCF587021CB143500A3A83F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */,
 				ACCF587A21CB143500A3A83F /* ViewController.swift in Sources */,
 				ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */,
 			);
@@ -283,6 +336,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = passGUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +357,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = passGUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
