@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF4FE21CC658E004162F1 /* Perform.framework */; };
+		1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */; };
+		1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF50321CC7E6B004162F1 /* Aspects.framework */; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F1BF4FE21CC658E004162F1 /* Perform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Perform.framework; path = Carthage/Build/iOS/Perform.framework; sourceTree = "<group>"; };
+		1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordDirectoriesController.swift; sourceTree = "<group>"; };
+		1F1BF50321CC7E6B004162F1 /* Aspects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aspects.framework; path = Carthage/Build/iOS/Aspects.framework; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */,
+				1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */,
 				ACCF588C21CB1C6D00A3A83F /* Result.framework in Frameworks */,
 				ACCF588D21CB1C6D00A3A83F /* SwiftGit2.framework in Frameworks */,
 			);
@@ -47,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */,
+				1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */,
 			);
 			path = ViewControllesrs;
 			sourceTree = "<group>";
@@ -85,6 +94,8 @@
 		ACCF588921CB1C6D00A3A83F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F1BF50321CC7E6B004162F1 /* Aspects.framework */,
+				1F1BF4FE21CC658E004162F1 /* Perform.framework */,
 				ACCF588A21CB1C6D00A3A83F /* Result.framework */,
 				ACCF588B21CB1C6D00A3A83F /* SwiftGit2.framework */,
 			);
@@ -177,12 +188,16 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftGit2.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Perform.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Aspects.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Result.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftGit2.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Perform.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Aspects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -196,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */,
+				1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */,
 				ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */,
 				ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */,
 			);

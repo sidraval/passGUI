@@ -165,16 +165,16 @@
                         <outlet property="repoURLView" destination="FVT-Ip-Oug" id="K5b-tm-xww"/>
                         <outlet property="username" destination="wHg-fi-e3A" id="icc-2H-jTH"/>
                         <outlet property="usernameView" destination="nB7-uS-qlg" id="uCF-ZW-jZ3"/>
-                        <segue destination="GBC-LI-Xne" kind="show" identifier="showFolders" id="ZTI-UI-ymB"/>
+                        <segue destination="GBC-LI-Xne" kind="show" identifier="showPasswordDirectories" id="ZTI-UI-ymB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--View Password Directories View Controller-->
         <scene sceneID="gi4-ar-BGS">
             <objects>
-                <viewController id="GBC-LI-Xne" sceneMemberID="viewController">
+                <viewController id="GBC-LI-Xne" customClass="ViewPasswordDirectoriesViewController" customModule="passGUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9dD-fH-HwT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nL-27-1Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="-17"/>
+            <point key="canvasLocation" x="1455" y="27"/>
         </scene>
     </scenes>
 </document>

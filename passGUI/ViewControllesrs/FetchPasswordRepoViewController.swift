@@ -1,3 +1,5 @@
+import Perform
+import Result
 import SwiftGit2
 import UIKit
 
@@ -43,18 +45,21 @@ class FetchPasswordRepoViewController: UIViewController {
         password.becomeFirstResponder()
     }
 
-    func cloneAndProceed() {
+    func attemptCloneRepo() -> Result<Repository, NSError> {
         let mUsername = username.text
         let mPassword = password.text
         let mFromURL = repoURL.text.flatMap { URL(string: $0) }
         guard let fromURL = mFromURL,
             let uname = mUsername,
             let pword = mPassword else {
-            print("Not a valid repositoryURL...")
-            return
+            return .failure(NSError())
         }
 
-        fetchAndPersistRepository(from: fromURL, to: archiveURL, username: uname, password: pword)
+        return fetchAndPersistRepository(from: fromURL, to: archiveURL, username: uname, password: pword)
+    }
+
+    func showPasswordDirectories() {
+        perform(.showPasswordDirectories)
     }
 }
 
@@ -66,8 +71,13 @@ extension FetchPasswordRepoViewController: UITextFieldDelegate {
         case username:
             password.becomeFirstResponder()
         case password:
-            cloneAndProceed()
-            password.resignFirstResponder()
+            switch attemptCloneRepo() {
+            case .success:
+                print("Succesfully cloned repository!")
+                showPasswordDirectories()
+            case let .failure(e):
+                print("Failed to clone repository", e)
+            }
         default:
             break
         }

@@ -1,2 +1,4 @@
 github "SwiftGit2/SwiftGit2" "0.4.0"
 github "antitypical/Result" "3.2.4"
+github "steipete/Aspects" "1.4.2"
+github "thoughtbot/Perform" "2.0.1"
