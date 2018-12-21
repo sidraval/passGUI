@@ -10,6 +10,10 @@
 		1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF4FE21CC658E004162F1 /* Perform.framework */; };
 		1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */; };
 		1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF50321CC7E6B004162F1 /* Aspects.framework */; };
+		1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */; };
+		1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */; };
+		1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53621CD6CCE004162F1 /* Directory.swift */; };
+		1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53821CD6CEC004162F1 /* Collection.swift */; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
@@ -25,6 +29,10 @@
 		1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordDirectoriesController.swift; sourceTree = "<group>"; };
 		1F1BF50321CC7E6B004162F1 /* Aspects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aspects.framework; path = Carthage/Build/iOS/Aspects.framework; sourceTree = "<group>"; };
 		1F1BF52E21CD450A004162F1 /* passGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passGUI.entitlements; sourceTree = "<group>"; };
+		1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoriesTableViewDataSource.swift; sourceTree = "<group>"; };
+		1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
+		1F1BF53621CD6CCE004162F1 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
+		1F1BF53821CD6CEC004162F1 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,30 @@
 			path = ViewControllesrs;
 			sourceTree = "<group>";
 		};
+		1F1BF53121CD4FA0004162F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F1BF53421CD6CB9004162F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BF53621CD6CCE004162F1 /* Directory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1F1BF53521CD6CC0004162F1 /* Extensions and Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BF53821CD6CEC004162F1 /* Collection.swift */,
+			);
+			path = "Extensions and Utilities";
+			sourceTree = "<group>";
+		};
 		ACCF586B21CB143500A3A83F = {
 			isa = PBXGroup;
 			children = (
@@ -82,8 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				1F1BF52E21CD450A004162F1 /* passGUI.entitlements */,
+				1F1BF53521CD6CC0004162F1 /* Extensions and Utilities */,
+				1F1BF53421CD6CB9004162F1 /* Models */,
 				1F1BF50021CC7962004162F1 /* ViewControllesrs */,
 				ACCF588F21CB1D9D00A3A83F /* Services */,
+				1F1BF53121CD4FA0004162F1 /* Views */,
 				ACCF587721CB143500A3A83F /* AppDelegate.swift */,
 				ACCF587B21CB143500A3A83F /* Main.storyboard */,
 				ACCF587E21CB143600A3A83F /* Assets.xcassets */,
@@ -108,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */,
+				1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -217,10 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */,
+				1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */,
 				ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */,
 				1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */,
+				1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */,
 				ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */,
 				ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */,
+				1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

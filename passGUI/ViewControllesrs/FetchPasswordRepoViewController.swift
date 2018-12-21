@@ -58,6 +58,10 @@ class FetchPasswordRepoViewController: UIViewController {
         return fetchAndPersistRepository(from: fromURL, to: archiveURL, username: uname, password: pword)
     }
 
+    @IBAction func manuallyTransition(_: Any) {
+        showPasswordDirectories()
+    }
+
     func showPasswordDirectories() {
         perform(.showPasswordDirectories)
     }

@@ -28,3 +28,9 @@ func fetchAndPersistRepository(
 func getDocumentsSubdirectories() throws -> [String] {
     return try FileManager().contentsOfDirectory(atPath: documentsDirectory.path)
 }
+
+func listDocumentsSubdirectories(for path: String) throws -> [String] {
+    let path = documentsDirectory.appendingPathComponent(path).path
+
+    return try FileManager.default.contentsOfDirectory(atPath: path)
+}
