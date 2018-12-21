@@ -1,7 +1,7 @@
 import SwiftGit2
 import UIKit
 
-class ViewController: UIViewController {
+class FetchPasswordRepoViewController: UIViewController {
     @IBOutlet var repoURL: UITextField!
     @IBOutlet var repoURLView: UIView!
 
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension FetchPasswordRepoViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case repoURL:
@@ -67,6 +67,7 @@ extension ViewController: UITextFieldDelegate {
             password.becomeFirstResponder()
         case password:
             cloneAndProceed()
+            password.resignFirstResponder()
         default:
             break
         }
