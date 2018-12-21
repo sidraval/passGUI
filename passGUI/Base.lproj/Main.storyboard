@@ -43,7 +43,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="url"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="next" textContentType="url"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="7WT-Mo-crw"/>
                                                 </connections>
@@ -85,7 +85,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="6nB-bG-IkY"/>
                                                 </connections>
@@ -127,7 +127,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="hCK-Un-Ja6"/>
                                                 </connections>
