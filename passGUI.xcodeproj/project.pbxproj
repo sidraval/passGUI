@@ -24,6 +24,7 @@
 		1F1BF4FE21CC658E004162F1 /* Perform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Perform.framework; path = Carthage/Build/iOS/Perform.framework; sourceTree = "<group>"; };
 		1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordDirectoriesController.swift; sourceTree = "<group>"; };
 		1F1BF50321CC7E6B004162F1 /* Aspects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aspects.framework; path = Carthage/Build/iOS/Aspects.framework; sourceTree = "<group>"; };
+		1F1BF52E21CD450A004162F1 /* passGUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = passGUI.entitlements; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		ACCF587621CB143500A3A83F /* passGUI */ = {
 			isa = PBXGroup;
 			children = (
+				1F1BF52E21CD450A004162F1 /* passGUI.entitlements */,
 				1F1BF50021CC7962004162F1 /* ViewControllesrs */,
 				ACCF588F21CB1D9D00A3A83F /* Services */,
 				ACCF587721CB143500A3A83F /* AppDelegate.swift */,
@@ -143,6 +145,11 @@
 				TargetAttributes = {
 					ACCF587321CB143500A3A83F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -359,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = passGUI/passGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = passGUI/passGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
