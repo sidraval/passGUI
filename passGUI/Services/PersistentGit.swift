@@ -34,3 +34,9 @@ func listDocumentsSubdirectories(for path: String) throws -> [String] {
 
     return try FileManager.default.contentsOfDirectory(atPath: path)
 }
+
+func listDocumentSubdirectories(for paths: [String]) throws -> [String] {
+    let path = paths.reduce(documentsDirectory) { $0.appendingPathComponent($1) }
+
+    return try FileManager.default.contentsOfDirectory(atPath: path.path)
+}

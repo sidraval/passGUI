@@ -18,4 +18,13 @@ class ViewPasswordDirectoriesViewController: UIViewController {
     }
 }
 
-extension ViewPasswordDirectoriesViewController: UITableViewDelegate {}
+extension ViewPasswordDirectoriesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = self.dataSource.sections[indexPath.section]
+        let directory = section.constituents[indexPath.row]
+
+        perform(.showContentsOfDirectory) { viewPasswordsVC in
+            viewPasswordsVC.directory = directory
+        }
+    }
+}
