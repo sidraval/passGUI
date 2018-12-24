@@ -2,7 +2,7 @@ import Foundation
 import Result
 import SwiftGit2
 
-let documentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
 let archiveURL = documentsDirectory.appendingPathComponent("repositories")
 
 func fetchAndPersistRepository(
@@ -26,7 +26,7 @@ func fetchAndPersistRepository(
 }
 
 func getDocumentsSubdirectories() throws -> [String] {
-    return try FileManager().contentsOfDirectory(atPath: documentsDirectory.path)
+    return try FileManager.default.contentsOfDirectory(atPath: documentsDirectory.path)
 }
 
 func listDocumentsSubdirectories(for path: String) throws -> [String] {
