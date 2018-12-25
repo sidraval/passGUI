@@ -10,6 +10,9 @@
 		1F0D9D4F21CFD16F0014ED45 /* ViewPasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */; };
 		1F0D9D5121D10DDA0014ED45 /* UsernamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */; };
 		1F0D9D5321D117E10014ED45 /* UsenameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5221D117E10014ED45 /* UsenameCell.swift */; };
+		1F0D9D5921D263290014ED45 /* ObjectivePGP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; };
+		1F0D9D5B21D263360014ED45 /* ObjectivePGP.framework in Embed ObjectivePGP */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F0D9D5D21D264310014ED45 /* PasswordDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */; };
 		1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF4FE21CC658E004162F1 /* Perform.framework */; };
 		1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */; };
 		1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF50321CC7E6B004162F1 /* Aspects.framework */; };
@@ -27,10 +30,26 @@
 		ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F0D9D5521D2627F0014ED45 /* Embed ObjectivePGP */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F0D9D5B21D263360014ED45 /* ObjectivePGP.framework in Embed ObjectivePGP */,
+			);
+			name = "Embed ObjectivePGP";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordsViewController.swift; sourceTree = "<group>"; };
 		1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernamesDataSource.swift; sourceTree = "<group>"; };
 		1F0D9D5221D117E10014ED45 /* UsenameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsenameCell.swift; sourceTree = "<group>"; };
+		1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectivePGP.framework; path = Vendor/ObjectivePGP.framework; sourceTree = "<group>"; };
+		1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDecryptor.swift; sourceTree = "<group>"; };
 		1F1BF4FE21CC658E004162F1 /* Perform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Perform.framework; path = Carthage/Build/iOS/Perform.framework; sourceTree = "<group>"; };
 		1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordDirectoriesController.swift; sourceTree = "<group>"; };
 		1F1BF50321CC7E6B004162F1 /* Aspects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aspects.framework; path = Carthage/Build/iOS/Aspects.framework; sourceTree = "<group>"; };
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0D9D5921D263290014ED45 /* ObjectivePGP.framework in Frameworks */,
 				1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */,
 				1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */,
 				ACCF588C21CB1C6D00A3A83F /* Result.framework in Frameworks */,
@@ -139,6 +159,7 @@
 		ACCF588921CB1C6D00A3A83F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */,
 				1F1BF50321CC7E6B004162F1 /* Aspects.framework */,
 				1F1BF4FE21CC658E004162F1 /* Perform.framework */,
 				ACCF588A21CB1C6D00A3A83F /* Result.framework */,
@@ -153,6 +174,7 @@
 				ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */,
 				1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */,
 				1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */,
+				1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -168,6 +190,7 @@
 				ACCF587121CB143500A3A83F /* Frameworks */,
 				ACCF587221CB143500A3A83F /* Resources */,
 				ACCF588E21CB1C9000A3A83F /* ShellScript */,
+				1F0D9D5521D2627F0014ED45 /* Embed ObjectivePGP */,
 			);
 			buildRules = (
 			);
@@ -263,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */,
+				1F0D9D5D21D264310014ED45 /* PasswordDecryptor.swift in Sources */,
 				1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */,
 				ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */,
 				1F0D9D4F21CFD16F0014ED45 /* ViewPasswordsViewController.swift in Sources */,
@@ -420,9 +444,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = passGUI/passGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = passGUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,9 +468,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = passGUI/passGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Vendor",
 				);
 				INFOPLIST_FILE = passGUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

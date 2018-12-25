@@ -311,13 +311,25 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password will appear here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQ7-qG-rQn">
+                                <rect key="frame" x="16" y="328" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XxH-Z9-vhO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="lqo-dB-srg" firstAttribute="top" secondItem="rAC-AY-7hX" secondAttribute="top" constant="16" id="B3m-2p-fA6"/>
                             <constraint firstItem="SkF-Gh-SRP" firstAttribute="top" secondItem="lqo-dB-srg" secondAttribute="bottom" constant="8" id="IRZ-83-tbP"/>
+                            <constraint firstItem="rAC-AY-7hX" firstAttribute="trailing" secondItem="BQ7-qG-rQn" secondAttribute="trailing" constant="16" id="LVp-Kf-KDk"/>
                             <constraint firstItem="lqo-dB-srg" firstAttribute="leading" secondItem="rAC-AY-7hX" secondAttribute="leading" constant="16" id="MZO-iu-919"/>
+                            <constraint firstItem="BQ7-qG-rQn" firstAttribute="leading" secondItem="rAC-AY-7hX" secondAttribute="leading" constant="16" id="RzZ-l3-WDN"/>
                             <constraint firstItem="rAC-AY-7hX" firstAttribute="trailing" secondItem="SkF-Gh-SRP" secondAttribute="trailing" id="me6-XF-f96"/>
+                            <constraint firstItem="BQ7-qG-rQn" firstAttribute="top" secondItem="SkF-Gh-SRP" secondAttribute="bottom" constant="16" id="qC5-Jw-2JU"/>
                             <constraint firstItem="SkF-Gh-SRP" firstAttribute="leading" secondItem="rAC-AY-7hX" secondAttribute="leading" id="xlu-wR-e26"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rAC-AY-7hX"/>
@@ -325,6 +337,7 @@
                     <navigationItem key="navigationItem" title="Usernames" id="chW-5Z-cT9"/>
                     <connections>
                         <outlet property="directoryName" destination="lqo-dB-srg" id="egI-sr-IRn"/>
+                        <outlet property="passwordField" destination="BQ7-qG-rQn" id="ERs-Sy-hld"/>
                         <outlet property="usernamesTable" destination="SkF-Gh-SRP" id="W3G-cv-aQi"/>
                     </connections>
                 </viewController>
