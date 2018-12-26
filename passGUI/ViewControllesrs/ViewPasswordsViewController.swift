@@ -8,9 +8,9 @@ extension Segue {
 }
 
 class ViewPasswordsViewController: UIViewController {
-    @IBOutlet weak var directoryName: UILabel!
-    @IBOutlet weak var usernamesTable: UITableView!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var directoryName: UILabel!
+    @IBOutlet var usernamesTable: UITableView!
+    @IBOutlet var passwordField: UITextField!
 
     var directory: Directory!
     lazy var unameDataSource = UsernamesDataSource(directory: self.directory)
@@ -25,8 +25,8 @@ class ViewPasswordsViewController: UIViewController {
 
 extension ViewPasswordsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let directory = self.unameDataSource.directory
-        let uname = self.unameDataSource.usernames[indexPath.row]
+        let directory = unameDataSource.directory
+        let uname = unameDataSource.usernames[indexPath.row]
 
         verifyFace { [weak self] in
             DispatchQueue.main.async {

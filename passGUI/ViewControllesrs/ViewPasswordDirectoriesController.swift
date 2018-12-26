@@ -14,9 +14,9 @@ class ViewPasswordDirectoriesViewController: UIViewController {
     let dataSource = DirectoriesTableViewDataSource()
 
     override func viewDidLoad() {
-        searchBar.delegate = self
-        tableView.dataSource = dataSource
-        tableView.delegate = self
+        self.searchBar.delegate = self
+        self.tableView.dataSource = dataSource
+        self.tableView.delegate = self
     }
 }
 
