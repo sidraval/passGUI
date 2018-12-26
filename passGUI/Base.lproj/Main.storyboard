@@ -240,6 +240,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Domains" id="TB8-cC-FoB"/>
                     <connections>
+                        <outlet property="searchBar" destination="er2-KS-F3y" id="f2P-ZN-Ur6"/>
                         <outlet property="tableView" destination="3Rs-fD-vDO" id="36B-Aj-qE3"/>
                         <segue destination="zHR-cH-BXX" kind="show" identifier="showContentsOfDirectory" id="oa1-2z-2tc"/>
                     </connections>

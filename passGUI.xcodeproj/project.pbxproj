@@ -13,6 +13,7 @@
 		1F0D9D5921D263290014ED45 /* ObjectivePGP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; };
 		1F0D9D5B21D263360014ED45 /* ObjectivePGP.framework in Embed ObjectivePGP */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F0D9D5D21D264310014ED45 /* PasswordDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */; };
+		1F0D9D5F21D3C0020014ED45 /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */; };
 		1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF4FE21CC658E004162F1 /* Perform.framework */; };
 		1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */; };
 		1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1BF50321CC7E6B004162F1 /* Aspects.framework */; };
@@ -50,6 +51,7 @@
 		1F0D9D5221D117E10014ED45 /* UsenameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsenameCell.swift; sourceTree = "<group>"; };
 		1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectivePGP.framework; path = Vendor/ObjectivePGP.framework; sourceTree = "<group>"; };
 		1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordDecryptor.swift; sourceTree = "<group>"; };
+		1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 		1F1BF4FE21CC658E004162F1 /* Perform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Perform.framework; path = Carthage/Build/iOS/Perform.framework; sourceTree = "<group>"; };
 		1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordDirectoriesController.swift; sourceTree = "<group>"; };
 		1F1BF50321CC7E6B004162F1 /* Aspects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Aspects.framework; path = Carthage/Build/iOS/Aspects.framework; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */,
 				1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */,
 				1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */,
+				1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1F0D9D5121D10DDA0014ED45 /* UsernamesDataSource.swift in Sources */,
 				1F0D9D5321D117E10014ED45 /* UsenameCell.swift in Sources */,
 				1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */,
+				1F0D9D5F21D3C0020014ED45 /* BiometricAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

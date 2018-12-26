@@ -28,6 +28,10 @@ extension ViewPasswordsViewController: UITableViewDelegate {
         let directory = self.unameDataSource.directory
         let uname = self.unameDataSource.usernames[indexPath.row]
 
-        passwordField.text = decryptPassword(for: directory, with: uname)
+        verifyFace { [weak self] in
+            DispatchQueue.main.async {
+                self?.passwordField.text = decryptPassword(for: directory, with: uname)
+            }
+        }
     }
 }
