@@ -13,13 +13,24 @@ class ViewPasswordsViewController: UIViewController {
     @IBOutlet var passwordField: UITextField!
 
     var directory: Directory!
-    lazy var unameDataSource = UsernamesDataSource(directory: self.directory)
+    var unameDataSource: UsernamesDataSource!
 
     override func viewDidLoad() {
-        usernamesTable.dataSource = unameDataSource
         usernamesTable.delegate = self
+        setDataSource()
 
         directoryName.text = directory.name
+    }
+
+    func setDataSource() {
+        switch getUsernamesFor(directory: directory) {
+        case .success(let unames):
+            unameDataSource = UsernamesDataSource(directory: directory, usernames: unames)
+        case .failure(_):
+            unameDataSource = UsernamesDataSource(directory: directory)
+        }
+
+        usernamesTable.dataSource = unameDataSource
     }
 }
 

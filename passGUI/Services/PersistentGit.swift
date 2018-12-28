@@ -36,7 +36,16 @@ func listDocumentsSubdirectories(for path: String) throws -> [String] {
 }
 
 func listDocumentSubdirectories(for paths: [String]) throws -> [String] {
-    let path = paths.reduce(documentsDirectory) { $0.appendingPathComponent($1) }
+    let url = paths.reduce(documentsDirectory) { $0.appendingPathComponent($1) }
 
-    return try FileManager.default.contentsOfDirectory(atPath: path.path)
+    return try FileManager.default.contentsOfDirectory(atPath: url.path)
+}
+
+func getUsernamesFor(directory: Directory) -> Result<[Username], PassError> {
+    do {
+        let subdirs = try listDocumentSubdirectories(for: ["repositories", directory.name])
+        return .success(subdirs.map(Username.init))
+    } catch {
+        return .failure(PassError(kind: .noUsernamesFound))
+    }
 }

@@ -23,6 +23,8 @@
 		1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */; };
 		1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53621CD6CCE004162F1 /* Directory.swift */; };
 		1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53821CD6CEC004162F1 /* Collection.swift */; };
+		1F8BA98E21D671A50010D61B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98D21D671A50010D61B /* Username.swift */; };
+		1F8BA99021D671B70010D61B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
 		1F1BF53621CD6CCE004162F1 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
 		1F1BF53821CD6CEC004162F1 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		1F8BA98D21D671A50010D61B /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
+		1F8BA98F21D671B70010D61B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				1F1BF53621CD6CCE004162F1 /* Directory.swift */,
+				1F8BA98D21D671A50010D61B /* Username.swift */,
+				1F8BA98F21D671B70010D61B /* Error.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F8BA99021D671B70010D61B /* Error.swift in Sources */,
 				1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */,
+				1F8BA98E21D671A50010D61B /* Username.swift in Sources */,
 				1F0D9D5D21D264310014ED45 /* PasswordDecryptor.swift in Sources */,
 				1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */,
 				ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */,

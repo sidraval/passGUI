@@ -2,11 +2,11 @@ import UIKit
 
 class UsernamesDataSource: NSObject, UITableViewDataSource {
     let directory: Directory
-    var usernames: [String]
+    var usernames: [Username]
 
-    init(directory: Directory) {
+    init(directory: Directory, usernames: [Username] = []) {
         self.directory = directory
-        self.usernames = getUsernamesFor(directory: directory)
+        self.usernames = usernames
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,10 +20,4 @@ class UsernamesDataSource: NSObject, UITableViewDataSource {
 
         return cell
     }
-}
-
-func getUsernamesFor(directory: Directory) -> [String] {
-    let usernames = try? listDocumentSubdirectories(for: ["repositories", directory.name])
-
-    return usernames ?? []
 }

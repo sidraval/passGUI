@@ -1,10 +1,10 @@
 import ObjectivePGP
 
-func decryptPassword(for domain: Directory, with username: String) -> String? {
+func decryptPassword(for domain: Directory, with username: Username) -> String? {
     return decryptPassword(using: getPrivateKeyFromKeychain(), for: domain, with: username)
 }
 
-func decryptPassword(using key: Data?, for domain: Directory, with username: String) -> String? {
+func decryptPassword(using key: Data?, for domain: Directory, with username: Username) -> String? {
     guard let privateKeyData = key else { return nil }
 
     do {
@@ -12,7 +12,7 @@ func decryptPassword(using key: Data?, for domain: Directory, with username: Str
         let pwUrl = documentsDirectory
             .appendingPathComponent("repositories")
             .appendingPathComponent(domain.name)
-            .appendingPathComponent(username, isDirectory: false)
+            .appendingPathComponent(username.value, isDirectory: false)
         let pwData = try Data(contentsOf: pwUrl)
 
         let decrypted = try ObjectivePGP.decrypt(pwData,
