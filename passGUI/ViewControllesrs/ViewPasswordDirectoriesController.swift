@@ -2,8 +2,12 @@ import Perform
 import UIKit
 
 extension Segue {
-    static var showPasswordDirectories: Segue<ViewPasswordDirectoriesViewController> {
-        return .init(identifier: "showPasswordDirectories")
+    static var skipOnboarding: Segue<ViewPasswordDirectoriesViewController> {
+        return .init(identifier: "skipOnboarding")
+    }
+
+    static var endOnboarding: Segue<ViewPasswordDirectoriesViewController> {
+        return .init(identifier: "endOnboarding")
     }
 }
 

@@ -10,6 +10,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="P6Y-MO-tvM">
+            <objects>
+                <viewController id="SHo-Jp-hHX" customClass="NavigationController" customModule="passGUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZV-7g-txz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Pvx-jF-b5T"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Unp-hz-eZb"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="startOnboarding" animates="NO" id="inJ-Ia-Lw0"/>
+                        <segue destination="GBC-LI-Xne" kind="show" identifier="skipOnboarding" animates="NO" id="Jed-zJ-XOn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANO-rn-aOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="705" y="-600"/>
+        </scene>
         <!--Clone-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -149,22 +169,12 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-l3-fFe">
-                                <rect key="frame" x="220" y="614" width="135" height="33"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="See Directories ➤"/>
-                                <connections>
-                                    <action selector="manuallyTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyL-ue-hPu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4JK-Tn-j2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="NGw-dX-ucb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4JK-Tn-j2n" secondAttribute="trailing" constant="10" id="TBo-g6-3VC"/>
                             <constraint firstItem="4JK-Tn-j2n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="X8f-Pi-qL4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mai-l3-fFe" secondAttribute="bottom" constant="20" id="kzR-eS-bq7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mai-l3-fFe" secondAttribute="trailing" constant="20" id="t17-vf-so0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -176,12 +186,12 @@
                         <outlet property="repoURLView" destination="FVT-Ip-Oug" id="K5b-tm-xww"/>
                         <outlet property="username" destination="wHg-fi-e3A" id="icc-2H-jTH"/>
                         <outlet property="usernameView" destination="nB7-uS-qlg" id="uCF-ZW-jZ3"/>
-                        <segue destination="GBC-LI-Xne" kind="show" identifier="showPasswordDirectories" id="ZTI-UI-ymB"/>
+                        <segue destination="GBC-LI-Xne" kind="show" identifier="endOnboarding" id="ZTI-UI-ymB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="99"/>
+            <point key="canvasLocation" x="158" y="158"/>
         </scene>
         <!--Domains-->
         <scene sceneID="gi4-ar-BGS">
@@ -238,7 +248,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="llc-vS-Hxv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Domains" id="TB8-cC-FoB"/>
+                    <navigationItem key="navigationItem" title="Domains" id="TB8-cC-FoB">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" id="eqF-jd-Spp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="er2-KS-F3y" id="f2P-ZN-Ur6"/>
                         <outlet property="tableView" destination="3Rs-fD-vDO" id="36B-Aj-qE3"/>
@@ -247,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nL-27-1Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="99"/>
+            <point key="canvasLocation" x="1220" y="158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vBj-Vo-W7y">
@@ -258,12 +270,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uBg-OR-Ivw"/>
+                        <segue destination="SHo-Jp-hHX" kind="relationship" relationship="rootViewController" id="eCO-0p-YFc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhi-yi-d6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="99"/>
+            <point key="canvasLocation" x="-250" y="-600"/>
         </scene>
         <!--Usernames-->
         <scene sceneID="9lu-RR-CMx">
@@ -344,7 +356,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeU-Fc-cQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="815"/>
+            <point key="canvasLocation" x="1220" y="918"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Jed-zJ-XOn"/>
+    </inferredMetricsTieBreakers>
 </document>

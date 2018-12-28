@@ -25,6 +25,7 @@
 		1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53821CD6CEC004162F1 /* Collection.swift */; };
 		1F8BA98E21D671A50010D61B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98D21D671A50010D61B /* Username.swift */; };
 		1F8BA99021D671B70010D61B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
+		1F8BA99421D681DB0010D61B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA99321D681DB0010D61B /* NavigationViewController.swift */; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		1F1BF53821CD6CEC004162F1 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1F8BA98D21D671A50010D61B /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		1F8BA98F21D671B70010D61B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		1F8BA99321D681DB0010D61B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */,
 				1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */,
 				1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */,
+				1F8BA99321D681DB0010D61B /* NavigationViewController.swift */,
 			);
 			path = ViewControllesrs;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */,
 				ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */,
 				ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */,
+				1F8BA99421D681DB0010D61B /* NavigationViewController.swift in Sources */,
 				1F0D9D5121D10DDA0014ED45 /* UsernamesDataSource.swift in Sources */,
 				1F0D9D5321D117E10014ED45 /* UsenameCell.swift in Sources */,
 				1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */,
