@@ -25,10 +25,6 @@ func fetchAndPersistRepository(
     )
 }
 
-func getDocumentsSubdirectories() throws -> [String] {
-    return try FileManager.default.contentsOfDirectory(atPath: documentsDirectory.path)
-}
-
 func listDocumentsSubdirectories(for path: String) throws -> [String] {
     let path = documentsDirectory.appendingPathComponent(path).path
 

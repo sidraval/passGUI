@@ -8,8 +8,8 @@ class DirectoriesTableViewDataSource: NSObject, UITableViewDataSource {
         let directoryNames = try? listDocumentsSubdirectories(for: "repositories")
         let directories = (directoryNames ?? []).map { Directory(name: $0) }
 
-        self.sections = buildAlphanumericSections(from: directories)
-        self.filteredSections = self.sections
+        sections = buildAlphanumericSections(from: directories)
+        filteredSections = sections
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -22,24 +22,25 @@ class DirectoriesTableViewDataSource: NSObject, UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filteredSections[section].constituents.count
+    func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredSections[section].constituents.count
     }
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return self.filteredSections.count
+    func numberOfSections(in _: UITableView) -> Int {
+        return filteredSections.count
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.filteredSections[section].letter
+    func tableView(_: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return filteredSections[section].letter
     }
 
     func showDirectories(matching text: String) {
         guard !text.isEmpty else {
-            self.filteredSections = self.sections
+            filteredSections = sections
             return
         }
-        self.filteredSections = self.sections.map { section in
+
+        filteredSections = sections.map { section in
             let directories = section.constituents.filter { directory in
                 return directory.name.lowercased().contains(text.lowercased())
             }

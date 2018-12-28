@@ -1,13 +1,12 @@
 import LocalAuthentication
+import Result
 
-func verifyFace(_ then: @escaping () -> ()) {
-    let context = LAContext()
-    context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics,
-                           localizedReason: "Scan your face to decrypt your passwords...") { success, error in
+func verifyFace(_ then: @escaping () -> Void) {
+    let reason = "Scan your face to decrypt your passwords..."
+    LAContext().evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
+                               localizedReason: reason) { success, _ in
         if success {
             then()
-        } else {
-            print("Error!", error)
         }
     }
 }

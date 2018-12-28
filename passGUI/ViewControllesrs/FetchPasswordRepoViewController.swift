@@ -77,7 +77,6 @@ extension FetchPasswordRepoViewController: UITextFieldDelegate {
         case password:
             switch attemptCloneRepo() {
             case .success:
-                print("Succesfully cloned repository!")
                 showPasswordDirectories()
             case let .failure(e):
                 print("Failed to clone repository", e)

@@ -1,6 +1,5 @@
 import KeychainSwift
 
-
 func getPrivateKeyFromKeychain() -> Data? {
     return KeychainSwift().getData("pgp_private_key")
 }

@@ -14,15 +14,15 @@ class ViewPasswordDirectoriesViewController: UIViewController {
     let dataSource = DirectoriesTableViewDataSource()
 
     override func viewDidLoad() {
-        self.searchBar.delegate = self
-        self.tableView.dataSource = dataSource
-        self.tableView.delegate = self
+        searchBar.delegate = self
+        tableView.dataSource = dataSource
+        tableView.delegate = self
     }
 }
 
 extension ViewPasswordDirectoriesViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let section = self.dataSource.filteredSections[indexPath.section]
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = dataSource.filteredSections[indexPath.section]
         let directory = section.constituents[indexPath.row]
 
         perform(.showContentsOfDirectory) { viewPasswordsVC in
@@ -32,17 +32,17 @@ extension ViewPasswordDirectoriesViewController: UITableViewDelegate {
 }
 
 extension ViewPasswordDirectoriesViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.dataSource.showDirectories(matching: searchText)
-        self.tableView.reloadData()
+    func searchBar(_: UISearchBar, textDidChange searchText: String) {
+        dataSource.showDirectories(matching: searchText)
+        tableView.reloadData()
     }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.dataSource.showDirectories(matching: "")
-        self.tableView.reloadData()
+    func searchBarCancelButtonClicked(_: UISearchBar) {
+        dataSource.showDirectories(matching: "")
+        tableView.reloadData()
     }
 }

@@ -9,8 +9,8 @@ class UsernamesDataSource: NSObject, UITableViewDataSource {
         self.usernames = usernames
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.usernames.count
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return usernames.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

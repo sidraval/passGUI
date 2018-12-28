@@ -24,9 +24,9 @@ class ViewPasswordsViewController: UIViewController {
 
     func setDataSource() {
         switch getUsernamesFor(directory: directory) {
-        case .success(let unames):
+        case let .success(unames):
             unameDataSource = UsernamesDataSource(directory: directory, usernames: unames)
-        case .failure(_):
+        case .failure:
             unameDataSource = UsernamesDataSource(directory: directory)
         }
 
@@ -35,7 +35,7 @@ class ViewPasswordsViewController: UIViewController {
 }
 
 extension ViewPasswordsViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let directory = unameDataSource.directory
         let uname = unameDataSource.usernames[indexPath.row]
 
