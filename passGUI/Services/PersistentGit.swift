@@ -25,22 +25,21 @@ func fetchAndPersistRepository(
     )
 }
 
-func listDocumentsSubdirectories(for path: String) throws -> [String] {
-    let path = documentsDirectory.appendingPathComponent(path).path
-
-    return try FileManager.default.contentsOfDirectory(atPath: path)
+func listDocumentsSubdirectories(for path: String) throws -> [Directory] {
+    return try listDocumentSubdirectories(for: [path])
 }
 
-func listDocumentSubdirectories(for paths: [String]) throws -> [String] {
+fileprivate func listDocumentSubdirectories(for paths: [String]) throws -> [Directory] {
     let url = paths.reduce(documentsDirectory) { $0.appendingPathComponent($1) }
+    let dirNames = try FileManager.default.contentsOfDirectory(atPath: url.path)
 
-    return try FileManager.default.contentsOfDirectory(atPath: url.path)
+    return dirNames.map { Directory(name: $0) }
 }
 
 func getUsernamesFor(directory: Directory) -> Result<[Username], PassError> {
     do {
         let subdirs = try listDocumentSubdirectories(for: ["repositories", directory.name])
-        return .success(subdirs.map(Username.init))
+        return .success(subdirs.map { Username(value: $0.name) })
     } catch {
         return .failure(PassError(kind: .noUsernamesFound))
     }
@@ -48,8 +47,7 @@ func getUsernamesFor(directory: Directory) -> Result<[Username], PassError> {
 
 func fetchPasswordDirectories() -> Result<[Directory], PassError> {
     do {
-        let directoryNames = try listDocumentsSubdirectories(for: "repositories")
-        return .success(directoryNames.map { Directory(name: $0) })
+        return .success(try listDocumentsSubdirectories(for: "repositories"))
     } catch {
         return .failure(PassError(kind: .noPasswordsFound))
     }
