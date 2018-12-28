@@ -11,12 +11,23 @@ class ViewPasswordDirectoriesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
 
-    let dataSource = DirectoriesTableViewDataSource()
+    var dataSource: DirectoriesTableViewDataSource!
 
     override func viewDidLoad() {
         searchBar.delegate = self
-        tableView.dataSource = dataSource
         tableView.delegate = self
+        setDataSource()
+    }
+
+    func setDataSource() {
+        switch fetchPasswordDirectories() {
+        case let .success(ds):
+            dataSource = DirectoriesTableViewDataSource(directories: ds)
+        case .failure:
+            dataSource = DirectoriesTableViewDataSource()
+        }
+
+        tableView.dataSource = dataSource
     }
 }
 

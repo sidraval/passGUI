@@ -45,3 +45,12 @@ func getUsernamesFor(directory: Directory) -> Result<[Username], PassError> {
         return .failure(PassError(kind: .noUsernamesFound))
     }
 }
+
+func fetchPasswordDirectories() -> Result<[Directory], PassError> {
+    do {
+        let directoryNames = try listDocumentsSubdirectories(for: "repositories")
+        return .success(directoryNames.map { Directory(name: $0) })
+    } catch {
+        return .failure(PassError(kind: .noPasswordsFound))
+    }
+}

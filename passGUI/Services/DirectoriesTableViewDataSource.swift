@@ -4,10 +4,7 @@ class DirectoriesTableViewDataSource: NSObject, UITableViewDataSource {
     var sections: [DirectorySection]
     var filteredSections: [DirectorySection]
 
-    override init() {
-        let directoryNames = try? listDocumentsSubdirectories(for: "repositories")
-        let directories = (directoryNames ?? []).map { Directory(name: $0) }
-
+    init(directories: [Directory] = []) {
         sections = buildAlphanumericSections(from: directories)
         filteredSections = sections
     }
