@@ -41,7 +41,9 @@ extension ViewPasswordsViewController: UITableViewDelegate {
 
         verifyFace { [weak self] in
             DispatchQueue.main.async {
-                self?.passwordField.text = decryptPassword(for: directory, with: uname)
+                let password = decryptPassword(for: directory, with: uname)
+                self?.passwordField.text = password
+                UIPasteboard.general.string = password
             }
         }
     }
