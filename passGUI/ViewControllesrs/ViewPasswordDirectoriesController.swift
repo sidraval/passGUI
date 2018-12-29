@@ -1,36 +1,15 @@
-import Perform
 import UIKit
-
-extension Segue {
-    static var skipOnboarding: Segue<ViewPasswordDirectoriesViewController> {
-        return .init(identifier: "skipOnboarding")
-    }
-
-    static var endOnboarding: Segue<ViewPasswordDirectoriesViewController> {
-        return .init(identifier: "endOnboarding")
-    }
-}
 
 class ViewPasswordDirectoriesViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
 
     var dataSource: DirectoriesTableViewDataSource!
+    weak var navigator: Navigator?
 
     override func viewDidLoad() {
         searchBar.delegate = self
         tableView.delegate = self
-        setDataSource()
-    }
-
-    func setDataSource() {
-        switch fetchPasswordDirectories() {
-        case let .success(ds):
-            dataSource = DirectoriesTableViewDataSource(directories: ds)
-        case .failure:
-            dataSource = DirectoriesTableViewDataSource()
-        }
-
         tableView.dataSource = dataSource
     }
 }
@@ -40,9 +19,7 @@ extension ViewPasswordDirectoriesViewController: UITableViewDelegate {
         let section = dataSource.filteredSections[indexPath.section]
         let directory = section.constituents[indexPath.row]
 
-        perform(.showContentsOfDirectory) { viewPasswordsVC in
-            viewPasswordsVC.directory = directory
-        }
+        navigator?.navigateToContentsOf(directory: directory)
     }
 }
 

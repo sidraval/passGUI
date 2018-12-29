@@ -1,11 +1,4 @@
-import Perform
 import UIKit
-
-extension Segue {
-    static var showContentsOfDirectory: Segue<ViewPasswordsViewController> {
-        return .init(identifier: "showContentsOfDirectory")
-    }
-}
 
 class ViewPasswordsViewController: UIViewController {
     @IBOutlet var directoryName: UILabel!

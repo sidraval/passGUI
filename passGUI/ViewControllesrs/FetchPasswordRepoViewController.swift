@@ -3,12 +3,6 @@ import Result
 import SwiftGit2
 import UIKit
 
-extension Segue {
-    static var startOnboarding: Segue<FetchPasswordRepoViewController> {
-        return .init(identifier: "startOnboarding")
-    }
-}
-
 class FetchPasswordRepoViewController: UIViewController {
     @IBOutlet var repoURL: UITextField!
     @IBOutlet var repoURLView: UIView!
