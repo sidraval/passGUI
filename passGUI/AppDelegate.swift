@@ -10,6 +10,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path {
                 print("Documents Directory: \(documentsPath)")
             }
+
+        if let sharedDocumentsPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.passGUI") {
+            print("Shared documents directory: \(sharedDocumentsPath)")
+        }
         #endif
 
         try? moveKeyToKeychainThenDelete()

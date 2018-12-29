@@ -2,8 +2,9 @@ import Foundation
 import Result
 import SwiftGit2
 
+let sharedDocumentsDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.passGUI")!
 let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-let archiveURL = documentsDirectory.appendingPathComponent("repositories")
+let archiveURL = sharedDocumentsDirectory.appendingPathComponent("repositories")
 
 func fetchAndPersistRepository(
     from fromURL: URL,
@@ -30,7 +31,7 @@ func listDocumentsSubdirectories(for path: String) throws -> [Directory] {
 }
 
 fileprivate func listDocumentSubdirectories(for paths: [String]) throws -> [Directory] {
-    let url = paths.reduce(documentsDirectory) { $0.appendingPathComponent($1) }
+    let url = paths.reduce(sharedDocumentsDirectory) { $0.appendingPathComponent($1) }
     let dirNames = try FileManager.default.contentsOfDirectory(atPath: url.path)
 
     return dirNames.map { Directory(name: $0) }

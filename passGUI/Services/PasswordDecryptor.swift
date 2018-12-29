@@ -9,7 +9,7 @@ func decryptPassword(using key: Data?, for domain: Directory, with username: Use
 
     do {
         let keys = try ObjectivePGP.readKeys(from: privateKeyData)
-        let pwUrl = documentsDirectory
+        let pwUrl = sharedDocumentsDirectory
             .appendingPathComponent("repositories")
             .appendingPathComponent(domain.name)
             .appendingPathComponent(username.value, isDirectory: false)
