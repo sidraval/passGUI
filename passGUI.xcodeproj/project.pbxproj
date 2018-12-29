@@ -23,9 +23,16 @@
 		1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */; };
 		1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53621CD6CCE004162F1 /* Directory.swift */; };
 		1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53821CD6CEC004162F1 /* Collection.swift */; };
+		1F235F4D21D7BD28008CB194 /* ObjectivePGP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; };
+		1F235F4F21D7BD59008CB194 /* ObjectivePGP.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F235F5021D7C0D4008CB194 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99E24D21D6A71D00A7F929 /* AuthenticationServices.framework */; };
 		1F8BA98E21D671A50010D61B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98D21D671A50010D61B /* Username.swift */; };
 		1F8BA99021D671B70010D61B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
 		1F8BA99421D681DB0010D61B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA99321D681DB0010D61B /* NavigationViewController.swift */; };
+		1F99E24E21D6A71D00A7F929 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99E24D21D6A71D00A7F929 /* AuthenticationServices.framework */; };
+		1F99E25121D6A71D00A7F929 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99E25021D6A71D00A7F929 /* CredentialProviderViewController.swift */; };
+		1F99E25421D6A71D00A7F929 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F99E25221D6A71D00A7F929 /* MainInterface.storyboard */; };
+		1F99E25921D6A71D00A7F929 /* AutofillProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F99E24C21D6A71D00A7F929 /* AutofillProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
@@ -35,6 +42,16 @@
 		ACCF588D21CB1C6D00A3A83F /* SwiftGit2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACCF588B21CB1C6D00A3A83F /* SwiftGit2.framework */; };
 		ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F99E25721D6A71D00A7F929 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACCF586C21CB143500A3A83F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F99E24B21D6A71D00A7F929;
+			remoteInfo = AutofillProvider;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1F0D9D5521D2627F0014ED45 /* Embed ObjectivePGP */ = {
@@ -46,6 +63,27 @@
 				1F0D9D5B21D263360014ED45 /* ObjectivePGP.framework in Embed ObjectivePGP */,
 			);
 			name = "Embed ObjectivePGP";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F235F4E21D7BD4B008CB194 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1F235F4F21D7BD59008CB194 /* ObjectivePGP.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F99E25D21D6A71D00A7F929 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1F99E25921D6A71D00A7F929 /* AutofillProvider.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -70,6 +108,12 @@
 		1F8BA98D21D671A50010D61B /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		1F8BA98F21D671B70010D61B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1F8BA99321D681DB0010D61B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		1F99E24C21D6A71D00A7F929 /* AutofillProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutofillProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F99E24D21D6A71D00A7F929 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		1F99E25021D6A71D00A7F929 /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
+		1F99E25321D6A71D00A7F929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1F99E25521D6A71D00A7F929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F99E25621D6A71D00A7F929 /* AutofillProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutofillProvider.entitlements; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -83,11 +127,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F99E24921D6A71D00A7F929 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F235F4D21D7BD28008CB194 /* ObjectivePGP.framework in Frameworks */,
+				1F99E24E21D6A71D00A7F929 /* AuthenticationServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACCF587121CB143500A3A83F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1F0D9D6121D508FD0014ED45 /* KeychainSwift.framework in Frameworks */,
+				1F235F5021D7C0D4008CB194 /* AuthenticationServices.framework in Frameworks */,
 				1F0D9D5921D263290014ED45 /* ObjectivePGP.framework in Frameworks */,
 				1F1BF50421CC7E6B004162F1 /* Aspects.framework in Frameworks */,
 				1F1BF4FF21CC658E004162F1 /* Perform.framework in Frameworks */,
@@ -137,10 +191,22 @@
 			path = "Extensions and Utilities";
 			sourceTree = "<group>";
 		};
+		1F99E24F21D6A71D00A7F929 /* AutofillProvider */ = {
+			isa = PBXGroup;
+			children = (
+				1F99E25021D6A71D00A7F929 /* CredentialProviderViewController.swift */,
+				1F99E25221D6A71D00A7F929 /* MainInterface.storyboard */,
+				1F99E25521D6A71D00A7F929 /* Info.plist */,
+				1F99E25621D6A71D00A7F929 /* AutofillProvider.entitlements */,
+			);
+			path = AutofillProvider;
+			sourceTree = "<group>";
+		};
 		ACCF586B21CB143500A3A83F = {
 			isa = PBXGroup;
 			children = (
 				ACCF587621CB143500A3A83F /* passGUI */,
+				1F99E24F21D6A71D00A7F929 /* AutofillProvider */,
 				ACCF587521CB143500A3A83F /* Products */,
 				ACCF588921CB1C6D00A3A83F /* Frameworks */,
 			);
@@ -150,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCF587421CB143500A3A83F /* passGUI.app */,
+				1F99E24C21D6A71D00A7F929 /* AutofillProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +248,7 @@
 				1F1BF4FE21CC658E004162F1 /* Perform.framework */,
 				ACCF588A21CB1C6D00A3A83F /* Result.framework */,
 				ACCF588B21CB1C6D00A3A83F /* SwiftGit2.framework */,
+				1F99E24D21D6A71D00A7F929 /* AuthenticationServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +269,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1F99E24B21D6A71D00A7F929 /* AutofillProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F99E25C21D6A71D00A7F929 /* Build configuration list for PBXNativeTarget "AutofillProvider" */;
+			buildPhases = (
+				1F99E24821D6A71D00A7F929 /* Sources */,
+				1F99E24921D6A71D00A7F929 /* Frameworks */,
+				1F99E24A21D6A71D00A7F929 /* Resources */,
+				1F235F4E21D7BD4B008CB194 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutofillProvider;
+			productName = AutofillProvider;
+			productReference = 1F99E24C21D6A71D00A7F929 /* AutofillProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		ACCF587321CB143500A3A83F /* passGUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ACCF588621CB143600A3A83F /* Build configuration list for PBXNativeTarget "passGUI" */;
@@ -210,10 +296,12 @@
 				ACCF587221CB143500A3A83F /* Resources */,
 				ACCF588E21CB1C9000A3A83F /* ShellScript */,
 				1F0D9D5521D2627F0014ED45 /* Embed ObjectivePGP */,
+				1F99E25D21D6A71D00A7F929 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1F99E25821D6A71D00A7F929 /* PBXTargetDependency */,
 			);
 			name = passGUI;
 			productName = passGUI;
@@ -230,9 +318,20 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Sid Raval";
 				TargetAttributes = {
+					1F99E24B21D6A71D00A7F929 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					ACCF587321CB143500A3A83F = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.DataProtection = {
 								enabled = 1;
 							};
@@ -254,11 +353,20 @@
 			projectRoot = "";
 			targets = (
 				ACCF587321CB143500A3A83F /* passGUI */,
+				1F99E24B21D6A71D00A7F929 /* AutofillProvider */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1F99E24A21D6A71D00A7F929 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F99E25421D6A71D00A7F929 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACCF587221CB143500A3A83F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +410,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F99E24821D6A71D00A7F929 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F99E25121D6A71D00A7F929 /* CredentialProviderViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ACCF587021CB143500A3A83F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,7 +444,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1F99E25821D6A71D00A7F929 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F99E24B21D6A71D00A7F929 /* AutofillProvider */;
+			targetProxy = 1F99E25721D6A71D00A7F929 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1F99E25221D6A71D00A7F929 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F99E25321D6A71D00A7F929 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		ACCF587B21CB143500A3A83F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -348,6 +480,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F99E25A21D6A71D00A7F929 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutofillProvider/AutofillProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
+				INFOPLIST_FILE = AutofillProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sidraval.passGUI.AutofillProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F99E25B21D6A71D00A7F929 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AutofillProvider/AutofillProvider.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
+				INFOPLIST_FILE = AutofillProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sidraval.passGUI.AutofillProvider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		ACCF588421CB143600A3A83F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -467,6 +645,7 @@
 		ACCF588721CB143600A3A83F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = passGUI/passGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +670,7 @@
 		ACCF588821CB143600A3A83F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = passGUI/passGUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -515,6 +695,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F99E25C21D6A71D00A7F929 /* Build configuration list for PBXNativeTarget "AutofillProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F99E25A21D6A71D00A7F929 /* Debug */,
+				1F99E25B21D6A71D00A7F929 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ACCF586F21CB143500A3A83F /* Build configuration list for PBXProject "passGUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
