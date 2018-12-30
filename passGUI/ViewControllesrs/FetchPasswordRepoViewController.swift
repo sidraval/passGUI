@@ -13,6 +13,8 @@ class FetchPasswordRepoViewController: UIViewController {
     @IBOutlet var password: UITextField!
     @IBOutlet var passwordView: UIView!
 
+    weak var navigator: Navigator!
+
     override func viewDidLoad() {
         let repoTapRecognizer = UITapGestureRecognizer(
             target: self,
@@ -59,7 +61,7 @@ class FetchPasswordRepoViewController: UIViewController {
     }
 
     func showPasswordDirectories() {
-        perform(.endOnboarding)
+        navigator.navigateToPasswordsDirectory()
     }
 }
 

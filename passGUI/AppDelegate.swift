@@ -11,9 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Documents Directory: \(documentsPath)")
             }
 
-        if let sharedDocumentsPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.passGUI") {
-            print("Shared documents directory: \(sharedDocumentsPath)")
-        }
+            if let sharedDocumentsPath = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.passGUI") {
+                print("Shared documents directory: \(sharedDocumentsPath)")
+            }
         #endif
 
         try? moveKeyToKeychainThenDelete()

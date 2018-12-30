@@ -8,5 +8,9 @@
 	<array>
 		<string>group.passGUI</string>
 	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.sidraval.passGUI</string>
+	</array>
 </dict>
 </plist>

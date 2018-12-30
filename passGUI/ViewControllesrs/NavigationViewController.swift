@@ -10,7 +10,22 @@ class NavigationController: UIViewController, Navigator {
         let vc = UIStoryboard(name: "FindPasswordFlow", bundle: nil).instantiateViewController(withIdentifier: "viewPasswords") as! ViewPasswordsViewController
         vc.directory = directory
 
+        var unameDataSource: UsernamesDataSource
+        switch getUsernamesFor(directory: directory) {
+        case let .success(unames):
+            unameDataSource = UsernamesDataSource(directory: directory, usernames: unames)
+        case .failure:
+            unameDataSource = UsernamesDataSource(directory: directory)
+        }
+
+        vc.unameDataSource = unameDataSource
+        vc.selectionDelegate = vc
+
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func navigateToPasswordsDirectory() {
+        skipOnboarding()
     }
 
     func navigateToInitialDestination() {
@@ -20,7 +35,9 @@ class NavigationController: UIViewController, Navigator {
         case .some:
             skipOnboarding()
         case .none:
-            perform(.startOnboarding)
+            perform(.startOnboarding) { vc in
+                vc.navigator = self
+            }
         }
     }
 

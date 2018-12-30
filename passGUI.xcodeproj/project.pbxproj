@@ -37,6 +37,16 @@
 		1F235F6721D818A4008CB194 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
 		1F235F6821D8194F008CB194 /* DirectoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */; };
 		1F235F6921D81AB4008CB194 /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */; };
+		1F235F6B21D83315008CB194 /* FSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235F6A21D83315008CB194 /* FSReader.swift */; };
+		1F235F6C21D8341E008CB194 /* ViewPasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */; };
+		1F235F6D21D83469008CB194 /* UsernamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */; };
+		1F235F6E21D83471008CB194 /* UsenameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5221D117E10014ED45 /* UsenameCell.swift */; };
+		1F235F7021D83578008CB194 /* PasswordSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235F6F21D83578008CB194 /* PasswordSelectionDelegate.swift */; };
+		1F235F7121D83578008CB194 /* PasswordSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235F6F21D83578008CB194 /* PasswordSelectionDelegate.swift */; };
+		1F235F7321D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235F7221D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift */; };
+		1F235F7421D841C7008CB194 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D9D6021D508FD0014ED45 /* KeychainSwift.framework */; };
+		1F235F7521D841D4008CB194 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D6221D50EE50014ED45 /* Keychain.swift */; };
+		1F235F7621D8421A008CB194 /* PasswordDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */; };
 		1F8BA98E21D671A50010D61B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98D21D671A50010D61B /* Username.swift */; };
 		1F8BA99021D671B70010D61B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
 		1F8BA99421D681DB0010D61B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA99321D681DB0010D61B /* NavigationViewController.swift */; };
@@ -120,6 +130,9 @@
 		1F235F5B21D81379008CB194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = passGUI/Base.lproj/FindPasswordFlow.storyboard; sourceTree = "<group>"; };
 		1F235F5E21D8154C008CB194 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		1F235F6221D8185B008CB194 /* DirectoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoriesDataSource.swift; sourceTree = "<group>"; };
+		1F235F6A21D83315008CB194 /* FSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSReader.swift; sourceTree = "<group>"; };
+		1F235F6F21D83578008CB194 /* PasswordSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSelectionDelegate.swift; sourceTree = "<group>"; };
+		1F235F7221D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewPasswordsViewController+PasswordSelectionDelegate.swift"; sourceTree = "<group>"; };
 		1F8BA98D21D671A50010D61B /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		1F8BA98F21D671B70010D61B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1F8BA99321D681DB0010D61B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +161,7 @@
 			files = (
 				1F235F4D21D7BD28008CB194 /* ObjectivePGP.framework in Frameworks */,
 				1F99E24E21D6A71D00A7F929 /* AuthenticationServices.framework in Frameworks */,
+				1F235F7421D841C7008CB194 /* KeychainSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +189,7 @@
 				1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */,
 				1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */,
 				1F8BA99321D681DB0010D61B /* NavigationViewController.swift */,
+				1F235F7221D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift */,
 			);
 			path = ViewControllesrs;
 			sourceTree = "<group>";
@@ -211,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				1F235F6221D8185B008CB194 /* DirectoriesDataSource.swift */,
+				1F235F6F21D83578008CB194 /* PasswordSelectionDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -222,6 +238,7 @@
 				1F99E25221D6A71D00A7F929 /* MainInterface.storyboard */,
 				1F99E25521D6A71D00A7F929 /* Info.plist */,
 				1F99E25621D6A71D00A7F929 /* AutofillProvider.entitlements */,
+				1F235F6A21D83315008CB194 /* FSReader.swift */,
 			);
 			path = AutofillProvider;
 			sourceTree = "<group>";
@@ -350,6 +367,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 						};
 					};
 					ACCF587321CB143500A3A83F = {
@@ -359,6 +379,9 @@
 								enabled = 1;
 							};
 							com.apple.DataProtection = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
 								enabled = 1;
 							};
 						};
@@ -443,13 +466,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F99E25121D6A71D00A7F929 /* CredentialProviderViewController.swift in Sources */,
+				1F235F6D21D83469008CB194 /* UsernamesDataSource.swift in Sources */,
+				1F235F6E21D83471008CB194 /* UsenameCell.swift in Sources */,
 				1F235F6621D8189F008CB194 /* Username.swift in Sources */,
 				1F235F6021D816A7008CB194 /* ViewPasswordDirectoriesController.swift in Sources */,
 				1F235F6921D81AB4008CB194 /* DirectoryCell.swift in Sources */,
+				1F235F6C21D8341E008CB194 /* ViewPasswordsViewController.swift in Sources */,
+				1F235F7621D8421A008CB194 /* PasswordDecryptor.swift in Sources */,
 				1F235F6421D8185B008CB194 /* DirectoriesDataSource.swift in Sources */,
+				1F235F7121D83578008CB194 /* PasswordSelectionDelegate.swift in Sources */,
+				1F235F6B21D83315008CB194 /* FSReader.swift in Sources */,
 				1F235F6821D8194F008CB194 /* DirectoriesTableViewDataSource.swift in Sources */,
 				1F235F6721D818A4008CB194 /* Error.swift in Sources */,
 				1F235F6521D8189C008CB194 /* Directory.swift in Sources */,
+				1F235F7521D841D4008CB194 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F235F7321D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift in Sources */,
 				1F8BA99021D671B70010D61B /* Error.swift in Sources */,
 				1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */,
 				1F8BA98E21D671A50010D61B /* Username.swift in Sources */,
@@ -467,6 +498,7 @@
 				1F235F6321D8185B008CB194 /* DirectoriesDataSource.swift in Sources */,
 				1F235F5F21D8154C008CB194 /* Segue.swift in Sources */,
 				1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */,
+				1F235F7021D83578008CB194 /* PasswordSelectionDelegate.swift in Sources */,
 				1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */,
 				ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */,
 				ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */,
@@ -530,6 +562,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AutofillProvider/AutofillProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
@@ -554,6 +587,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = AutofillProvider/AutofillProvider.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Vendor",
