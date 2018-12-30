@@ -22,7 +22,6 @@
 		1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */; };
 		1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */; };
 		1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53621CD6CCE004162F1 /* Directory.swift */; };
-		1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53821CD6CEC004162F1 /* Collection.swift */; };
 		1F235F4D21D7BD28008CB194 /* ObjectivePGP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; };
 		1F235F4F21D7BD59008CB194 /* ObjectivePGP.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 1F0D9D5821D263290014ED45 /* ObjectivePGP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F235F5021D7C0D4008CB194 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F99E24D21D6A71D00A7F929 /* AuthenticationServices.framework */; };
@@ -34,7 +33,6 @@
 		1F235F6421D8185B008CB194 /* DirectoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235F6221D8185B008CB194 /* DirectoriesDataSource.swift */; };
 		1F235F6521D8189C008CB194 /* Directory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53621CD6CCE004162F1 /* Directory.swift */; };
 		1F235F6621D8189F008CB194 /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98D21D671A50010D61B /* Username.swift */; };
-		1F235F6721D818A4008CB194 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
 		1F235F6821D8194F008CB194 /* DirectoriesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */; };
 		1F235F6921D81AB4008CB194 /* DirectoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */; };
 		1F235F6B21D83315008CB194 /* FSReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F235F6A21D83315008CB194 /* FSReader.swift */; };
@@ -54,6 +52,7 @@
 		1F99E25121D6A71D00A7F929 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99E25021D6A71D00A7F929 /* CredentialProviderViewController.swift */; };
 		1F99E25421D6A71D00A7F929 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F99E25221D6A71D00A7F929 /* MainInterface.storyboard */; };
 		1F99E25921D6A71D00A7F929 /* AutofillProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F99E24C21D6A71D00A7F929 /* AutofillProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FDB3A2821D88C6000BC2795 /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
 		ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCF587B21CB143500A3A83F /* Main.storyboard */; };
@@ -126,7 +125,6 @@
 		1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoriesTableViewDataSource.swift; sourceTree = "<group>"; };
 		1F1BF53221CD4FB9004162F1 /* DirectoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryCell.swift; sourceTree = "<group>"; };
 		1F1BF53621CD6CCE004162F1 /* Directory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Directory.swift; sourceTree = "<group>"; };
-		1F1BF53821CD6CEC004162F1 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1F235F5B21D81379008CB194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = passGUI/Base.lproj/FindPasswordFlow.storyboard; sourceTree = "<group>"; };
 		1F235F5E21D8154C008CB194 /* Segue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		1F235F6221D8185B008CB194 /* DirectoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoriesDataSource.swift; sourceTree = "<group>"; };
@@ -186,8 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */,
-				1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */,
-				1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */,
 				1F8BA99321D681DB0010D61B /* NavigationViewController.swift */,
 				1F235F7221D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift */,
 			);
@@ -206,8 +202,6 @@
 		1F1BF53421CD6CB9004162F1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1F1BF53621CD6CCE004162F1 /* Directory.swift */,
-				1F8BA98D21D671A50010D61B /* Username.swift */,
 				1F8BA98F21D671B70010D61B /* Error.swift */,
 			);
 			path = Models;
@@ -216,7 +210,6 @@
 		1F1BF53521CD6CC0004162F1 /* Extensions and Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1F1BF53821CD6CEC004162F1 /* Collection.swift */,
 				1F235F5E21D8154C008CB194 /* Segue.swift */,
 			);
 			path = "Extensions and Utilities";
@@ -243,9 +236,53 @@
 			path = AutofillProvider;
 			sourceTree = "<group>";
 		};
+		1FDB3A2921D8907600BC2795 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1F235F5A21D81379008CB194 /* FindPasswordFlow.storyboard */,
+				1F1BF53121CD4FA0004162F1 /* Views */,
+				1FDB3A2D21D890E700BC2795 /* Services */,
+				1FDB3A2B21D890AA00BC2795 /* ViewControllers */,
+				1FDB3A2A21D8909A00BC2795 /* Models */,
+				1F235F6121D81846008CB194 /* Protocols */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		1FDB3A2A21D8909A00BC2795 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BF53621CD6CCE004162F1 /* Directory.swift */,
+				1F8BA98D21D671A50010D61B /* Username.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1FDB3A2B21D890AA00BC2795 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BF50121CC79D9004162F1 /* ViewPasswordDirectoriesController.swift */,
+				1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1FDB3A2D21D890E700BC2795 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */,
+				1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */,
+				1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */,
+				1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */,
+				1F0D9D6221D50EE50014ED45 /* Keychain.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		ACCF586B21CB143500A3A83F = {
 			isa = PBXGroup;
 			children = (
+				1FDB3A2921D8907600BC2795 /* Shared */,
 				ACCF587621CB143500A3A83F /* passGUI */,
 				1F99E24F21D6A71D00A7F929 /* AutofillProvider */,
 				ACCF587521CB143500A3A83F /* Products */,
@@ -266,15 +303,12 @@
 			isa = PBXGroup;
 			children = (
 				1F1BF52E21CD450A004162F1 /* passGUI.entitlements */,
-				1F235F6121D81846008CB194 /* Protocols */,
 				1F1BF53521CD6CC0004162F1 /* Extensions and Utilities */,
 				1F1BF53421CD6CB9004162F1 /* Models */,
 				1F1BF50021CC7962004162F1 /* ViewControllesrs */,
 				ACCF588F21CB1D9D00A3A83F /* Services */,
-				1F1BF53121CD4FA0004162F1 /* Views */,
 				ACCF587721CB143500A3A83F /* AppDelegate.swift */,
 				ACCF587B21CB143500A3A83F /* Main.storyboard */,
-				1F235F5A21D81379008CB194 /* FindPasswordFlow.storyboard */,
 				ACCF587E21CB143600A3A83F /* Assets.xcassets */,
 				ACCF588021CB143600A3A83F /* LaunchScreen.storyboard */,
 				ACCF588321CB143600A3A83F /* Info.plist */,
@@ -300,11 +334,6 @@
 			isa = PBXGroup;
 			children = (
 				ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */,
-				1F1BF52F21CD47A6004162F1 /* DirectoriesTableViewDataSource.swift */,
-				1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */,
-				1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */,
-				1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */,
-				1F0D9D6221D50EE50014ED45 /* Keychain.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -477,8 +506,8 @@
 				1F235F7121D83578008CB194 /* PasswordSelectionDelegate.swift in Sources */,
 				1F235F6B21D83315008CB194 /* FSReader.swift in Sources */,
 				1F235F6821D8194F008CB194 /* DirectoriesTableViewDataSource.swift in Sources */,
-				1F235F6721D818A4008CB194 /* Error.swift in Sources */,
 				1F235F6521D8189C008CB194 /* Directory.swift in Sources */,
+				1FDB3A2821D88C6000BC2795 /* BiometricAuth.swift in Sources */,
 				1F235F7521D841D4008CB194 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,7 +534,6 @@
 				1F8BA99421D681DB0010D61B /* NavigationViewController.swift in Sources */,
 				1F0D9D5121D10DDA0014ED45 /* UsernamesDataSource.swift in Sources */,
 				1F0D9D5321D117E10014ED45 /* UsenameCell.swift in Sources */,
-				1F1BF53921CD6CEC004162F1 /* Collection.swift in Sources */,
 				1F0D9D5F21D3C0020014ED45 /* BiometricAuth.swift in Sources */,
 				1F0D9D6321D50EE50014ED45 /* Keychain.swift in Sources */,
 			);
