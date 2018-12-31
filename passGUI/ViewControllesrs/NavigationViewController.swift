@@ -7,17 +7,13 @@ class NavigationController: UIViewController, Navigator {
     }
 
     func navigateToContentsOf(directory: Directory) {
-        let vc = UIStoryboard(name: "FindPasswordFlow", bundle: nil).instantiateViewController(withIdentifier: "viewPasswords") as! ViewPasswordsViewController
+        let vc = UIStoryboard.viewPasswordsVC
+        let unameDataSource = UsernamesDataSource(
+            directory: directory,
+            usernames: getUsernamesFor(directory: directory).recover([])
+        )
+
         vc.directory = directory
-
-        var unameDataSource: UsernamesDataSource
-        switch getUsernamesFor(directory: directory) {
-        case let .success(unames):
-            unameDataSource = UsernamesDataSource(directory: directory, usernames: unames)
-        case .failure:
-            unameDataSource = UsernamesDataSource(directory: directory)
-        }
-
         vc.unameDataSource = unameDataSource
         vc.selectionDelegate = vc
 

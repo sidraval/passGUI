@@ -1,5 +1,11 @@
 import UIKit
 
+extension UIStoryboard {
+    static var viewPasswordsVC: ViewPasswordsViewController {
+        return UIStoryboard(name: "FindPasswordFlow", bundle: nil).instantiateViewController(withIdentifier: "viewPasswords") as! ViewPasswordsViewController
+    }
+}
+
 class ViewPasswordsViewController: UIViewController {
     @IBOutlet var directoryName: UILabel!
     @IBOutlet var usernamesTable: UITableView!

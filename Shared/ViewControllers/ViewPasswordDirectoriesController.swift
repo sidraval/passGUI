@@ -12,6 +12,13 @@ class ViewPasswordDirectoriesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = dataSource
     }
+
+    func showResultsMatching(_ string: String?) {
+        guard let s = string else { return }
+
+        searchBar.text = s
+        searchBar(searchBar, textDidChange: s)
+    }
 }
 
 extension ViewPasswordDirectoriesViewController: UITableViewDelegate {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F03610921D943390044E5A1 /* CredentialProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F03610821D943390044E5A1 /* CredentialProvider.swift */; };
 		1F0D9D4F21CFD16F0014ED45 /* ViewPasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */; };
 		1F0D9D5121D10DDA0014ED45 /* UsernamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */; };
 		1F0D9D5321D117E10014ED45 /* UsenameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5221D117E10014ED45 /* UsenameCell.swift */; };
@@ -110,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F03610821D943390044E5A1 /* CredentialProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProvider.swift; sourceTree = "<group>"; };
 		1F0D9D4E21CFD16F0014ED45 /* ViewPasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPasswordsViewController.swift; sourceTree = "<group>"; };
 		1F0D9D5021D10DDA0014ED45 /* UsernamesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernamesDataSource.swift; sourceTree = "<group>"; };
 		1F0D9D5221D117E10014ED45 /* UsenameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsenameCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				1F99E25521D6A71D00A7F929 /* Info.plist */,
 				1F99E25621D6A71D00A7F929 /* AutofillProvider.entitlements */,
 				1F235F6A21D83315008CB194 /* FSReader.swift */,
+				1F03610821D943390044E5A1 /* CredentialProvider.swift */,
 			);
 			path = AutofillProvider;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				1F235F6B21D83315008CB194 /* FSReader.swift in Sources */,
 				1F235F6821D8194F008CB194 /* DirectoriesTableViewDataSource.swift in Sources */,
 				1F235F6521D8189C008CB194 /* Directory.swift in Sources */,
+				1F03610921D943390044E5A1 /* CredentialProvider.swift in Sources */,
 				1FDB3A2821D88C6000BC2795 /* BiometricAuth.swift in Sources */,
 				1F235F7521D841D4008CB194 /* Keychain.swift in Sources */,
 			);
