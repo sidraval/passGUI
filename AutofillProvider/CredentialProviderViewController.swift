@@ -2,8 +2,6 @@ import AuthenticationServices
 import ObjectivePGP
 
 class CredentialProviderViewController: ASCredentialProviderViewController {
-    var currentIdentifier: ASCredentialServiceIdentifier?
-
     var embeddedNavigationController: UINavigationController {
         return children.first as! UINavigationController
     }
@@ -15,9 +13,9 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     lazy var credentialProvider = CredentialProvider(extensionContext: self.extensionContext)
 
     override func prepareCredentialList(for serviceIdentifiers: [ASCredentialServiceIdentifier]) {
-        currentIdentifier = serviceIdentifiers.first
+        credentialProvider.identifier = serviceIdentifiers.first
 
-        let url = currentIdentifier.flatMap { URL(string: $0.identifier) }
+        let url = serviceIdentifiers.first.flatMap { URL(string: $0.identifier) }
         directoriesViewController.showResultsMatching(url?.host?.sanitizedDomain)
     }
 
@@ -27,7 +25,7 @@ class CredentialProviderViewController: ASCredentialProviderViewController {
     }
 
     override func provideCredentialWithoutUserInteraction(for credentialIdentity: ASPasswordCredentialIdentity) {
-        credentialProvider.persistAndProvideCredentials(for: credentialIdentity)
+        credentialProvider.credentials(for: credentialIdentity)
     }
 }
 
@@ -52,7 +50,7 @@ extension CredentialProviderViewController: Navigator {
         embeddedNavigationController.pushViewController(vc, animated: true)
     }
 
-    func navigateToPasswordsDirectory() {}
+    func navigateToPasswordsDirectory() { /* noop */ }
 }
 
 private extension String {

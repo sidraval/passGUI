@@ -8,7 +8,7 @@ class CredentialProvider {
         self.extensionContext = extensionContext
     }
 
-    func persistAndProvideCredentials(for identity: ASPasswordCredentialIdentity) {
+    func credentials(for identity: ASPasswordCredentialIdentity) {
         guard let recordIdentifier = identity.recordIdentifier else { return }
         let directory = Directory(name: recordIdentifier)
         let username = Username(value: identity.user)
