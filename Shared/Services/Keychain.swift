@@ -1,8 +1,10 @@
 import KeychainSwift
 
+let accessGroup = "DEV_GROUP_HERE.com.sidraval.passGUI"
+
 func getPrivateKeyFromKeychain() -> Data? {
     let keychain = KeychainSwift()
-    keychain.accessGroup = "LKF4VLY687.com.sidraval.passGUI"
+    keychain.accessGroup = accessGroup
     return keychain.getData("pgp_private_key")
 }
 
@@ -22,7 +24,7 @@ fileprivate func addPrivateKeyToKeychain() throws {
     let privateKeyUrl = documentsDirectory.appendingPathComponent("gpg_private_key.asc", isDirectory: false)
 
     let keychain = KeychainSwift()
-    keychain.accessGroup = "com.sidraval.passGUI"
+    keychain.accessGroup = accessGroup
     try addDataToKeychain(from: privateKeyUrl)
 }
 
@@ -30,6 +32,6 @@ fileprivate func addDataToKeychain(from url: URL) throws {
     let data = try Data(contentsOf: url)
 
     let keychain = KeychainSwift()
-    keychain.accessGroup = "com.sidraval.passGUI"
+    keychain.accessGroup = accessGroup
     keychain.set(data, forKey: "pgp_private_key")
 }
