@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4JK-Tn-j2n">
-                                <rect key="frame" x="10" y="114" width="355" height="300"/>
+                                <rect key="frame" x="10" y="74" width="355" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVT-Ip-Oug">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="100"/>
@@ -172,7 +172,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4JK-Tn-j2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="NGw-dX-ucb"/>
+                            <constraint firstItem="4JK-Tn-j2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NGw-dX-ucb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4JK-Tn-j2n" secondAttribute="trailing" constant="10" id="TBo-g6-3VC"/>
                             <constraint firstItem="4JK-Tn-j2n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="X8f-Pi-qL4"/>
                         </constraints>

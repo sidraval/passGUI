@@ -37,22 +37,17 @@ class FetchPasswordRepoViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        displayNoPgpKeyAlert()
+        checkForPGPKey()
     }
 
-    func displayNoPgpKeyAlert() {
-        let privateKeyUrl = documentsDirectory.appendingPathComponent("gpg_private_key.asc", isDirectory: false)
+    func checkForPGPKey() {
         if FileManager.default.fileExists(atPath: privateKeyUrl.path) {
             try? moveKeyToKeychainThenDelete()
         } else {
-            let alert = UIAlertController(title: "No private PGP key detected",
-                                          message: "Please use itunes to copy your ASCII armored PGP private key to the passGUI application, then press OK.",
-                                          preferredStyle: .alert)
-            let action = UIAlertAction(title: "Try again", style: .default) { [weak self] (action) in
-                self?.displayNoPgpKeyAlert()
-            }
-            alert.addAction(action)
-
+            let alert = noPgpKeyFoundAlert(
+                cancel: {},
+                redetect: { [weak self] in self?.checkForPGPKey() }
+            )
             present(alert, animated: true)
         }
     }

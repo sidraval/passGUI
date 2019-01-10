@@ -1,37 +1,65 @@
 import KeychainSwift
 
 let accessGroup = "DEV_GROUP_HERE.com.sidraval.passGUI"
+let privateKeyUrl = documentsDirectory.appendingPathComponent("gpg_private_key.asc", isDirectory: false)
 
-func getPrivateKeyFromKeychain() -> Data? {
+let keychain: KeychainSwift = {
     let keychain = KeychainSwift()
     keychain.accessGroup = accessGroup
+
+    return keychain
+}()
+
+func getPrivateKeyFromKeychain() -> Data? {
     return keychain.getData("pgp_private_key")
 }
 
-func moveKeyToKeychainThenDelete() throws {
-    guard getPrivateKeyFromKeychain() == nil else { return }
+func moveKeyToKeychainThenDelete() -> KeychainResult {
+    guard getPrivateKeyFromKeychain() == nil else { return .keyExistsInKeychain }
 
-    try addPrivateKeyToKeychain()
-    try removeKeyFromDocumentsDirectory()
+    let addResult = addDataToKeychain(from: privateKeyUrl)
+    let removeResult = removeKeyFromDocumentsDirectory()
+
+    switch (addResult, removeResult) {
+    case (.success, .success):
+        return .success
+    case (let x, .success):
+        return x
+    case (.success, let x):
+        return x
+    default:
+        return .totalFailure
+    }
 }
 
-fileprivate func removeKeyFromDocumentsDirectory() throws {
-    let privateKeyUrl = documentsDirectory.appendingPathComponent("gpg_private_key.asc", isDirectory: false)
-    try FileManager.default.removeItem(at: privateKeyUrl)
+fileprivate func removeKeyFromDocumentsDirectory() -> KeychainResult {
+    do {
+        try FileManager.default.removeItem(at: privateKeyUrl)
+        return .success
+    } catch {
+        return .removeKeyFromFilesystemFailure
+    }
 }
 
-fileprivate func addPrivateKeyToKeychain() throws {
-    let privateKeyUrl = documentsDirectory.appendingPathComponent("gpg_private_key.asc", isDirectory: false)
+fileprivate func addDataToKeychain(from url: URL) -> KeychainResult {
+    do {
+        let data = try Data(contentsOf: url)
 
-    let keychain = KeychainSwift()
-    keychain.accessGroup = accessGroup
-    try addDataToKeychain(from: privateKeyUrl)
+        if (keychain.set(data, forKey: "pgp_private_key")) {
+            return .success
+        } else {
+            return .keychainSetFailure
+        }
+    } catch {
+        return .privateKeyReadError
+    }
 }
 
-fileprivate func addDataToKeychain(from url: URL) throws {
-    let data = try Data(contentsOf: url)
-
-    let keychain = KeychainSwift()
-    keychain.accessGroup = accessGroup
-    keychain.set(data, forKey: "pgp_private_key")
+enum KeychainResult: String {
+    case success
+    case keyExistsInKeychain
+    case keychainSetFailure
+    case privateKeyReadError
+    case removeKeyFromFilesystemFailure
+    case totalFailure
 }

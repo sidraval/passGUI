@@ -25,16 +25,18 @@ class NavigationController: UIViewController, Navigator {
     }
 
     func navigateToInitialDestination() {
-        let hasCloned = try? listDocumentsSubdirectories(for: "repositories")
-
-        switch hasCloned {
-        case .some:
-            skipOnboarding()
-        case .none:
-            perform(.startOnboarding) { vc in
-                vc.navigator = self
-            }
-        }
+        let vc = UIStoryboard.detectPGPKeyVC
+        navigationController?.pushViewController(vc, animated: false)
+//        let hasCloned = try? listDocumentsSubdirectories(for: "repositories")
+//
+//        switch hasCloned {
+//        case .some:
+//            skipOnboarding()
+//        case .none:
+//            perform(.startOnboarding) { vc in
+//                vc.navigator = self
+//            }
+//        }
     }
 
     private func skipOnboarding() {

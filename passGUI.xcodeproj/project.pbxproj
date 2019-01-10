@@ -46,6 +46,10 @@
 		1F235F7421D841C7008CB194 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D9D6021D508FD0014ED45 /* KeychainSwift.framework */; };
 		1F235F7521D841D4008CB194 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D6221D50EE50014ED45 /* Keychain.swift */; };
 		1F235F7621D8421A008CB194 /* PasswordDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5C21D264310014ED45 /* PasswordDecryptor.swift */; };
+		1F4E9B2821DFC57B009E50FD /* ErrorAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E9B2721DFC57B009E50FD /* ErrorAlerts.swift */; };
+		1F4E9B2A21DFF589009E50FD /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F4E9B2921DFF589009E50FD /* Onboarding.storyboard */; };
+		1F4E9B2C21DFF934009E50FD /* FSWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E9B2B21DFF934009E50FD /* FSWatcher.swift */; };
+		1F4E9B4121E6DE1F009E50FD /* DetectPGPKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F4E9B4021E6DE1F009E50FD /* DetectPGPKeyViewController.swift */; };
 		1F8BA98E21D671A50010D61B /* Username.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98D21D671A50010D61B /* Username.swift */; };
 		1F8BA99021D671B70010D61B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA98F21D671B70010D61B /* Error.swift */; };
 		1F8BA99421D681DB0010D61B /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F8BA99321D681DB0010D61B /* NavigationViewController.swift */; };
@@ -133,6 +137,10 @@
 		1F235F6A21D83315008CB194 /* FSReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSReader.swift; sourceTree = "<group>"; };
 		1F235F6F21D83578008CB194 /* PasswordSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSelectionDelegate.swift; sourceTree = "<group>"; };
 		1F235F7221D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewPasswordsViewController+PasswordSelectionDelegate.swift"; sourceTree = "<group>"; };
+		1F4E9B2721DFC57B009E50FD /* ErrorAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorAlerts.swift; path = passGUI/services/ErrorAlerts.swift; sourceTree = SOURCE_ROOT; };
+		1F4E9B2921DFF589009E50FD /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		1F4E9B2B21DFF934009E50FD /* FSWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FSWatcher.swift; path = passGUI/services/FSWatcher.swift; sourceTree = SOURCE_ROOT; };
+		1F4E9B4021E6DE1F009E50FD /* DetectPGPKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectPGPKeyViewController.swift; sourceTree = "<group>"; };
 		1F8BA98D21D671A50010D61B /* Username.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Username.swift; sourceTree = "<group>"; };
 		1F8BA98F21D671B70010D61B /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		1F8BA99321D681DB0010D61B /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +196,7 @@
 				ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */,
 				1F8BA99321D681DB0010D61B /* NavigationViewController.swift */,
 				1F235F7221D835F2008CB194 /* ViewPasswordsViewController+PasswordSelectionDelegate.swift */,
+				1F4E9B4021E6DE1F009E50FD /* DetectPGPKeyViewController.swift */,
 			);
 			path = ViewControllesrs;
 			sourceTree = "<group>";
@@ -312,6 +321,7 @@
 				ACCF588F21CB1D9D00A3A83F /* Services */,
 				ACCF587721CB143500A3A83F /* AppDelegate.swift */,
 				ACCF587B21CB143500A3A83F /* Main.storyboard */,
+				1F4E9B2921DFF589009E50FD /* Onboarding.storyboard */,
 				ACCF587E21CB143600A3A83F /* Assets.xcassets */,
 				ACCF588021CB143600A3A83F /* LaunchScreen.storyboard */,
 				ACCF588321CB143600A3A83F /* Info.plist */,
@@ -337,6 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				ACCF589021CB1DDF00A3A83F /* PersistentGit.swift */,
+				1F4E9B2721DFC57B009E50FD /* ErrorAlerts.swift */,
+				1F4E9B2B21DFF934009E50FD /* FSWatcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -454,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCF588221CB143600A3A83F /* LaunchScreen.storyboard in Resources */,
+				1F4E9B2A21DFF589009E50FD /* Onboarding.storyboard in Resources */,
 				ACCF587F21CB143600A3A83F /* Assets.xcassets in Resources */,
 				1F235F5C21D81379008CB194 /* FindPasswordFlow.storyboard in Resources */,
 				ACCF587D21CB143500A3A83F /* Main.storyboard in Resources */,
@@ -524,13 +537,16 @@
 				1F8BA99021D671B70010D61B /* Error.swift in Sources */,
 				1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */,
 				1F8BA98E21D671A50010D61B /* Username.swift in Sources */,
+				1F4E9B4121E6DE1F009E50FD /* DetectPGPKeyViewController.swift in Sources */,
 				1F0D9D5D21D264310014ED45 /* PasswordDecryptor.swift in Sources */,
+				1F4E9B2C21DFF934009E50FD /* FSWatcher.swift in Sources */,
 				1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */,
 				ACCF589121CB1DDF00A3A83F /* PersistentGit.swift in Sources */,
 				1F0D9D4F21CFD16F0014ED45 /* ViewPasswordsViewController.swift in Sources */,
 				1F235F6321D8185B008CB194 /* DirectoriesDataSource.swift in Sources */,
 				1F235F5F21D8154C008CB194 /* Segue.swift in Sources */,
 				1F1BF50221CC79D9004162F1 /* ViewPasswordDirectoriesController.swift in Sources */,
+				1F4E9B2821DFC57B009E50FD /* ErrorAlerts.swift in Sources */,
 				1F235F7021D83578008CB194 /* PasswordSelectionDelegate.swift in Sources */,
 				1F1BF53321CD4FB9004162F1 /* DirectoryCell.swift in Sources */,
 				ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */,
