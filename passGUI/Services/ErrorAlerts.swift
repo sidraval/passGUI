@@ -19,7 +19,7 @@ func noPgpKeyFoundAlert(
     let cancelAction = UIAlertAction(
         title: "Cancel",
         style: .cancel,
-        handler: { action in cancel() }
+        handler: { _ in cancel() }
     )
 
     let alert = UIAlertController(title: title,
@@ -28,6 +28,22 @@ func noPgpKeyFoundAlert(
 
     alert.addAction(redetectAction)
     alert.addAction(cancelAction)
+
+    return alert
+}
+
+func pgpKeyPasswordAlert(textFieldDelegate: UITextFieldDelegate?, completion: @escaping () -> Void) -> UIAlertController {
+    let submitAction = UIAlertAction(title: "OK", style: .default) { _ in
+        completion()
+    }
+    let alert = UIAlertController(title: "Private Key Password", message: "Enter your PGP Key password", preferredStyle: .alert)
+
+    alert.addTextField { textField in
+        textField.delegate = textFieldDelegate
+        textField.textContentType = UITextContentType.password
+        textField.isSecureTextEntry = true
+    }
+    alert.addAction(submitAction)
 
     return alert
 }

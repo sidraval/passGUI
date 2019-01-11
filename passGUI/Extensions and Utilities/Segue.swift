@@ -1,7 +1,7 @@
 import Perform
 
 extension Segue {
-    static var startOnboarding: Segue<FetchPasswordRepoViewController> {
+    static var startOnboarding: Segue<DetectPGPKeyViewController> {
         return .init(identifier: "startOnboarding")
     }
 }
@@ -9,10 +9,6 @@ extension Segue {
 extension Segue {
     static var skipOnboarding: Segue<ViewPasswordDirectoriesViewController> {
         return .init(identifier: "skipOnboarding")
-    }
-
-    static var endOnboarding: Segue<ViewPasswordDirectoriesViewController> {
-        return .init(identifier: "endOnboarding")
     }
 }
 

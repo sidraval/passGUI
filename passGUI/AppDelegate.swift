@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         #endif
 
-        try? moveKeyToKeychainThenDelete()
+        _ = moveKeyToKeychainThenDelete()
 
         return true
     }

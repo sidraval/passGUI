@@ -2,18 +2,21 @@ import Foundation
 
 class FileWatcher {
     let fsSource: DispatchSourceFileSystemObject
-    let handler: () -> Void
 
-    init(handler: @escaping () -> Void) {
-        self.handler = handler
-
-        let queue = DispatchQueue.init(label: "FileMonitorQueue")
+    init() {
+        let queue = DispatchQueue(label: "FileMonitorQueue", target: .main)
         let path = documentsDirectory.path.cString(using: .ascii)
+
         let fileDescriptor = open(path!, O_EVTONLY)
         fsSource = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fileDescriptor, eventMask: .write, queue: queue)
 
-        fsSource.setEventHandler { [weak self] in
-            self?.handler()
+        fsSource.setEventHandler {
+            do {
+                let fileHandle = try FileHandle(forReadingFrom: documentsDirectory.appendingPathComponent("gpg_private_key.asc"))
+                fileHandle.readToEndOfFileInBackgroundAndNotify()
+            } catch let e {
+                print(e)
+            }
         }
 
         fsSource.setCancelHandler {
@@ -21,5 +24,9 @@ class FileWatcher {
         }
 
         fsSource.resume()
+    }
+
+    deinit {
+        fsSource.cancel()
     }
 }

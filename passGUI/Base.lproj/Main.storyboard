@@ -22,176 +22,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Unp-hz-eZb"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="startOnboarding" animates="NO" id="inJ-Ia-Lw0"/>
                         <segue destination="s4w-ZC-j3v" kind="show" identifier="skipOnboarding" animates="NO" id="Jed-zJ-XOn"/>
+                        <segue destination="anD-1l-baP" kind="show" identifier="startOnboarding" id="67Y-NH-CKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANO-rn-aOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="705" y="-600"/>
-        </scene>
-        <!--Clone-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="FetchPasswordRepoViewController" customModule="passGUI" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4JK-Tn-j2n">
-                                <rect key="frame" x="10" y="74" width="355" height="300"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FVT-Ip-Oug">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="100"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvd-MR-NVQ">
-                                                <rect key="frame" x="10" y="10" width="325" height="20.5"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="aWt-O4-f2q">
-                                                <rect key="frame" x="10" y="40.5" width="335" height="40"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="oZY-GQ-wK7"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="next" textContentType="url"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7WT-Mo-crw"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" label="Repository URL">
-                                            <bool key="isElement" value="YES"/>
-                                        </accessibility>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Hvd-MR-NVQ" secondAttribute="trailing" constant="20" symbolic="YES" id="0pQ-uI-jU0"/>
-                                            <constraint firstItem="Hvd-MR-NVQ" firstAttribute="top" secondItem="FVT-Ip-Oug" secondAttribute="top" constant="10" id="81c-VA-ixk"/>
-                                            <constraint firstItem="aWt-O4-f2q" firstAttribute="top" secondItem="Hvd-MR-NVQ" secondAttribute="bottom" constant="10" id="CbQ-80-CmH"/>
-                                            <constraint firstItem="Hvd-MR-NVQ" firstAttribute="leading" secondItem="FVT-Ip-Oug" secondAttribute="leading" constant="10" id="Kmn-Pd-tw1"/>
-                                            <constraint firstAttribute="height" constant="100" id="ME7-GA-fXb"/>
-                                            <constraint firstItem="aWt-O4-f2q" firstAttribute="leading" secondItem="FVT-Ip-Oug" secondAttribute="leading" constant="10" id="i7e-Ga-hef"/>
-                                            <constraint firstAttribute="trailing" secondItem="aWt-O4-f2q" secondAttribute="trailing" constant="10" id="sH4-Wi-s4Z"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nB7-uS-qlg">
-                                        <rect key="frame" x="0.0" y="100" width="355" height="100"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxZ-zD-duh">
-                                                <rect key="frame" x="10" y="10" width="325" height="20.5"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHg-fi-e3A">
-                                                <rect key="frame" x="10" y="40.5" width="335" height="40"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="5hH-On-Plv"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" textContentType="username"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6nB-bG-IkY"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" label="Username">
-                                            <bool key="isElement" value="YES"/>
-                                        </accessibility>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="wHg-fi-e3A" secondAttribute="trailing" constant="10" id="a4k-Mr-ie8"/>
-                                            <constraint firstItem="wHg-fi-e3A" firstAttribute="leading" secondItem="nB7-uS-qlg" secondAttribute="leading" constant="10" id="bb5-r6-1sS"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="MxZ-zD-duh" secondAttribute="trailing" constant="20" symbolic="YES" id="hf5-LL-Pm8"/>
-                                            <constraint firstItem="wHg-fi-e3A" firstAttribute="top" secondItem="MxZ-zD-duh" secondAttribute="bottom" constant="10" id="jTU-Cx-pE2"/>
-                                            <constraint firstItem="MxZ-zD-duh" firstAttribute="leading" secondItem="nB7-uS-qlg" secondAttribute="leading" constant="10" id="kiU-RU-cd4"/>
-                                            <constraint firstItem="MxZ-zD-duh" firstAttribute="top" secondItem="nB7-uS-qlg" secondAttribute="top" constant="10" id="u5E-9v-rC1"/>
-                                            <constraint firstAttribute="height" constant="100" id="zlf-8o-1yx"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zb-UZ-KL7">
-                                        <rect key="frame" x="0.0" y="200" width="355" height="100"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-HA-pVv">
-                                                <rect key="frame" x="10" y="10" width="325" height="20.5"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vno-NU-dzv">
-                                                <rect key="frame" x="10" y="40.5" width="335" height="40"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <bool key="isElement" value="NO"/>
-                                                </accessibility>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="q5g-9s-VdP"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hCK-Un-Ja6"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" label="Password">
-                                            <bool key="isElement" value="YES"/>
-                                        </accessibility>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="kK6-HA-pVv" secondAttribute="trailing" constant="20" symbolic="YES" id="2I6-1N-Efh"/>
-                                            <constraint firstItem="kK6-HA-pVv" firstAttribute="top" secondItem="2zb-UZ-KL7" secondAttribute="top" constant="10" id="8zb-Er-YZG"/>
-                                            <constraint firstItem="Vno-NU-dzv" firstAttribute="leading" secondItem="2zb-UZ-KL7" secondAttribute="leading" constant="10" id="9dJ-AW-XAv"/>
-                                            <constraint firstItem="kK6-HA-pVv" firstAttribute="leading" secondItem="2zb-UZ-KL7" secondAttribute="leading" constant="10" id="Wer-U5-mBH"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vno-NU-dzv" secondAttribute="trailing" constant="10" id="muV-s5-bjf"/>
-                                            <constraint firstItem="Vno-NU-dzv" firstAttribute="top" secondItem="kK6-HA-pVv" secondAttribute="bottom" constant="10" id="uil-l5-I2T"/>
-                                            <constraint firstAttribute="height" constant="100" id="vx7-zT-ALU"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="4JK-Tn-j2n" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="NGw-dX-ucb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4JK-Tn-j2n" secondAttribute="trailing" constant="10" id="TBo-g6-3VC"/>
-                            <constraint firstItem="4JK-Tn-j2n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="X8f-Pi-qL4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Clone" id="Lue-I9-T2a"/>
-                    <connections>
-                        <outlet property="password" destination="Vno-NU-dzv" id="Fxy-7D-lwv"/>
-                        <outlet property="passwordView" destination="2zb-UZ-KL7" id="MHD-DE-tcs"/>
-                        <outlet property="repoURL" destination="aWt-O4-f2q" id="B2a-Po-NTq"/>
-                        <outlet property="repoURLView" destination="FVT-Ip-Oug" id="K5b-tm-xww"/>
-                        <outlet property="username" destination="wHg-fi-e3A" id="icc-2H-jTH"/>
-                        <outlet property="usernameView" destination="nB7-uS-qlg" id="uCF-ZW-jZ3"/>
-                        <segue destination="s4w-ZC-j3v" kind="show" identifier="endOnboarding" id="ZTI-UI-ymB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="158" y="158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vBj-Vo-W7y">
@@ -216,10 +53,15 @@
                 <viewControllerPlaceholder storyboardName="FindPasswordFlow" id="s4w-ZC-j3v" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvL-cr-7CE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="158"/>
+            <point key="canvasLocation" x="1311" y="-775"/>
+        </scene>
+        <!--Onboarding-->
+        <scene sceneID="IFX-u2-ACQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Onboarding" id="anD-1l-baP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGz-xl-wq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278" y="-435"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ZTI-UI-ymB"/>
-    </inferredMetricsTieBreakers>
 </document>

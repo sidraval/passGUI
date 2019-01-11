@@ -10,6 +10,10 @@ let keychain: KeychainSwift = {
     return keychain
 }()
 
+func addPgpKeyPasswordToKeychain(_ pw: String) -> Bool {
+    return keychain.set(pw, forKey: "pgp_private_key_password")
+}
+
 func getPrivateKeyFromKeychain() -> Data? {
     return keychain.getData("pgp_private_key")
 }

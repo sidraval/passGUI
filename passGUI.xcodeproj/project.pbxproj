@@ -322,8 +322,8 @@
 				ACCF587721CB143500A3A83F /* AppDelegate.swift */,
 				ACCF587B21CB143500A3A83F /* Main.storyboard */,
 				1F4E9B2921DFF589009E50FD /* Onboarding.storyboard */,
-				ACCF587E21CB143600A3A83F /* Assets.xcassets */,
 				ACCF588021CB143600A3A83F /* LaunchScreen.storyboard */,
+				ACCF587E21CB143600A3A83F /* Assets.xcassets */,
 				ACCF588321CB143600A3A83F /* Info.plist */,
 			);
 			path = passGUI;

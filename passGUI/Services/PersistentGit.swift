@@ -3,7 +3,7 @@ import Result
 import SwiftGit2
 
 let sharedDocumentsDirectory = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.passGUI")!
-let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+let documentsDirectory = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 let archiveURL = sharedDocumentsDirectory.appendingPathComponent("repositories")
 
 func fetchAndPersistRepository(

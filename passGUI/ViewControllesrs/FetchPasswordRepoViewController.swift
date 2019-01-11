@@ -37,19 +37,6 @@ class FetchPasswordRepoViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        checkForPGPKey()
-    }
-
-    func checkForPGPKey() {
-        if FileManager.default.fileExists(atPath: privateKeyUrl.path) {
-            try? moveKeyToKeychainThenDelete()
-        } else {
-            let alert = noPgpKeyFoundAlert(
-                cancel: {},
-                redetect: { [weak self] in self?.checkForPGPKey() }
-            )
-            present(alert, animated: true)
-        }
     }
 
     @objc func focusRepoURLField(_: UITapGestureRecognizer) {
