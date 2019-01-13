@@ -57,6 +57,8 @@
 		1F99E25121D6A71D00A7F929 /* CredentialProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F99E25021D6A71D00A7F929 /* CredentialProviderViewController.swift */; };
 		1F99E25421D6A71D00A7F929 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F99E25221D6A71D00A7F929 /* MainInterface.storyboard */; };
 		1F99E25921D6A71D00A7F929 /* AutofillProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F99E24C21D6A71D00A7F929 /* AutofillProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1FB3BEF821EB7E1500D1184E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB3BEF721EB7E1500D1184E /* Navigator.swift */; };
+		1FB3BEF921EB7E1500D1184E /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB3BEF721EB7E1500D1184E /* Navigator.swift */; };
 		1FDB3A2821D88C6000BC2795 /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0D9D5E21D3C0020014ED45 /* BiometricAuth.swift */; };
 		ACCF587821CB143500A3A83F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587721CB143500A3A83F /* AppDelegate.swift */; };
 		ACCF587A21CB143500A3A83F /* FetchPasswordRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */; };
@@ -150,6 +152,7 @@
 		1F99E25321D6A71D00A7F929 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1F99E25521D6A71D00A7F929 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F99E25621D6A71D00A7F929 /* AutofillProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AutofillProvider.entitlements; sourceTree = "<group>"; };
+		1FB3BEF721EB7E1500D1184E /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		ACCF587421CB143500A3A83F /* passGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCF587721CB143500A3A83F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCF587921CB143500A3A83F /* FetchPasswordRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPasswordRepoViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +234,7 @@
 			children = (
 				1F235F6221D8185B008CB194 /* DirectoriesDataSource.swift */,
 				1F235F6F21D83578008CB194 /* PasswordSelectionDelegate.swift */,
+				1FB3BEF721EB7E1500D1184E /* Navigator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -511,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F99E25121D6A71D00A7F929 /* CredentialProviderViewController.swift in Sources */,
+				1FB3BEF921EB7E1500D1184E /* Navigator.swift in Sources */,
 				1F235F6D21D83469008CB194 /* UsernamesDataSource.swift in Sources */,
 				1F235F6E21D83471008CB194 /* UsenameCell.swift in Sources */,
 				1F235F6621D8189F008CB194 /* Username.swift in Sources */,
@@ -538,6 +543,7 @@
 				1F1BF53721CD6CCE004162F1 /* Directory.swift in Sources */,
 				1F8BA98E21D671A50010D61B /* Username.swift in Sources */,
 				1F4E9B4121E6DE1F009E50FD /* DetectPGPKeyViewController.swift in Sources */,
+				1FB3BEF821EB7E1500D1184E /* Navigator.swift in Sources */,
 				1F0D9D5D21D264310014ED45 /* PasswordDecryptor.swift in Sources */,
 				1F4E9B2C21DFF934009E50FD /* FSWatcher.swift in Sources */,
 				1F1BF53021CD47A6004162F1 /* DirectoriesTableViewDataSource.swift in Sources */,

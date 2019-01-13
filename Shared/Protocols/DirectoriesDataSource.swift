@@ -5,9 +5,3 @@ protocol DirectoriesDataSource: UITableViewDataSource {
 
     func showDirectories(matching text: String)
 }
-
-protocol Navigator: class {
-    func navigateToContentsOf(directory: Directory)
-    func navigateToPasswordsDirectory()
-    func navigateToFetchRepository()
-}
