@@ -1,18 +1,18 @@
 import Foundation
+fileprivate let queue = DispatchQueue(label: "FileMonitorQueue", target: .main)
 
 class FileWatcher {
     let fsSource: DispatchSourceFileSystemObject
 
-    init() {
-        let queue = DispatchQueue(label: "FileMonitorQueue", target: .main)
-        let path = documentsDirectory.path.cString(using: .ascii)
+    init(in directory: URL, filename: String) {
+        let path = directory.path.cString(using: .ascii)
 
         let fileDescriptor = open(path!, O_EVTONLY)
         fsSource = DispatchSource.makeFileSystemObjectSource(fileDescriptor: fileDescriptor, eventMask: .write, queue: queue)
 
         fsSource.setEventHandler {
             do {
-                let fileHandle = try FileHandle(forReadingFrom: documentsDirectory.appendingPathComponent("gpg_private_key.asc"))
+                let fileHandle = try FileHandle(forReadingFrom: documentsDirectory.appendingPathComponent(filename))
                 fileHandle.readToEndOfFileInBackgroundAndNotify()
             } catch let e {
                 print(e)

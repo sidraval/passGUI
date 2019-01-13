@@ -20,6 +20,13 @@ class NavigationController: UIViewController, Navigator {
         navigationController?.pushViewController(vc, animated: true)
     }
 
+    func navigateToFetchRepository() {
+        let vc = UIStoryboard.fetchPasswordRepoVC
+        vc.navigator = self
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
     func navigateToPasswordsDirectory() {
         skipOnboarding()
     }

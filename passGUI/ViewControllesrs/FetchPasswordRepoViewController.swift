@@ -3,6 +3,15 @@ import Result
 import SwiftGit2
 import UIKit
 
+extension UIStoryboard {
+    static var fetchPasswordRepoVC: FetchPasswordRepoViewController {
+        return UIStoryboard(
+            name: "Onboarding",
+            bundle: nil
+        ).instantiateViewController(withIdentifier: "fetchPasswordRepoVC") as! FetchPasswordRepoViewController
+    }
+}
+
 class FetchPasswordRepoViewController: UIViewController {
     @IBOutlet var repoURL: UITextField!
     @IBOutlet var repoURLView: UIView!

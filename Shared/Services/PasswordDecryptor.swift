@@ -5,7 +5,7 @@ func decryptPassword(for domain: Directory, with username: Username) -> String? 
 }
 
 func decryptPassword(using key: Data?, for domain: Directory, with username: Username) -> String? {
-    guard let privateKeyData = key else { return nil }
+    guard let privateKeyData = key, let privateKeyPassword = getPgpKeyPassword() else { return nil }
 
     do {
         let keys = try ObjectivePGP.readKeys(from: privateKeyData)
@@ -18,7 +18,7 @@ func decryptPassword(using key: Data?, for domain: Directory, with username: Use
         let decrypted = try ObjectivePGP.decrypt(pwData,
                                                  andVerifySignature: false,
                                                  using: keys,
-                                                 passphraseForKey: { _ in "PW_HERE" })
+                                                 passphraseForKey: { _ in privateKeyPassword })
 
         return String(data: decrypted, encoding: .utf8)?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     } catch {

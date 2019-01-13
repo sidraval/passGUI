@@ -37,13 +37,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXR-bO-2hA">
-                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="👯‍♀️ Clone Git Repository">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -51,14 +44,11 @@
                             <constraint firstItem="Abd-Yl-WAa" firstAttribute="leading" secondItem="ICn-Vr-LJW" secondAttribute="leading" constant="16" id="9rb-c9-AyF"/>
                             <constraint firstItem="jG5-GL-ukX" firstAttribute="leading" secondItem="ICn-Vr-LJW" secondAttribute="leading" constant="16" id="Ljy-ch-TfB"/>
                             <constraint firstItem="ICn-Vr-LJW" firstAttribute="trailing" secondItem="jG5-GL-ukX" secondAttribute="trailing" constant="16" id="STc-cT-O1l"/>
-                            <constraint firstItem="ICn-Vr-LJW" firstAttribute="trailing" secondItem="RXR-bO-2hA" secondAttribute="trailing" constant="16" id="SU1-il-S4P"/>
                             <constraint firstItem="wUw-st-hx9" firstAttribute="leading" secondItem="ICn-Vr-LJW" secondAttribute="leading" constant="16" id="Vgh-Yb-qii"/>
                             <constraint firstItem="ICn-Vr-LJW" firstAttribute="trailing" secondItem="wUw-st-hx9" secondAttribute="trailing" constant="16" id="ZS0-4D-Ppx"/>
                             <constraint firstItem="ICn-Vr-LJW" firstAttribute="trailing" secondItem="Abd-Yl-WAa" secondAttribute="trailing" constant="16" id="b96-xf-q2a"/>
-                            <constraint firstItem="RXR-bO-2hA" firstAttribute="leading" secondItem="ICn-Vr-LJW" secondAttribute="leading" constant="16" id="gdD-aF-dS1"/>
                             <constraint firstItem="jG5-GL-ukX" firstAttribute="top" secondItem="wUw-st-hx9" secondAttribute="bottom" constant="30" id="ix1-6c-cuF"/>
                             <constraint firstItem="wUw-st-hx9" firstAttribute="top" secondItem="ICn-Vr-LJW" secondAttribute="top" constant="16" id="jVV-nH-JW8"/>
-                            <constraint firstItem="RXR-bO-2hA" firstAttribute="top" secondItem="Abd-Yl-WAa" secondAttribute="bottom" constant="44" id="p4x-gg-CN6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ICn-Vr-LJW"/>
                     </view>
@@ -77,7 +67,7 @@
         <!--Clone-->
         <scene sceneID="M7W-XB-cqV">
             <objects>
-                <viewController id="dox-Ha-uA7" customClass="FetchPasswordRepoViewController" customModule="passGUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fetchPasswordRepoVC" id="dox-Ha-uA7" customClass="FetchPasswordRepoViewController" customModule="passGUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UGe-na-AJu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

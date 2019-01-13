@@ -51,6 +51,9 @@ extension CredentialProviderViewController: Navigator {
     }
 
     func navigateToPasswordsDirectory() { /* noop */ }
+    func navigateToFetchRepository() {
+        /* noop */
+    }
 }
 
 private extension String {

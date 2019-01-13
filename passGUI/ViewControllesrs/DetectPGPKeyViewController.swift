@@ -17,24 +17,30 @@ class DetectPGPKeyViewController: UIViewController {
     var navigator: Navigator!
 
     override func viewDidLoad() {
-        fileWatcher = FileWatcher()
+        fileWatcher = FileWatcher(in: documentsDirectory, filename: "gpg_private_key.asc")
         NotificationCenter.default.addObserver(self, selector: #selector(handleSuccessfulKeyWrite), name: .NSFileHandleReadToEndOfFileCompletion, object: nil)
+    }
+
+    override func viewDidAppear(_: Bool) {
+        if getPrivateKeyFromKeychain() != nil {
+            pgpPasswordAlertDismissed()
+        }
     }
 
     @objc func handleSuccessfulKeyWrite() {
         switch moveKeyToKeychainThenDelete() {
         case .success:
-            self.copiedToKeychainLabel.text = copiedToKeychainSuccess
-            self.removedFromDiskLabel.text = removedFromDiskSuccess
-            let alert = pgpKeyPasswordAlert(textFieldDelegate: self, completion: self.pgpPasswordAlertDismissed)
-            self.present(alert, animated: true, completion: nil)
-        case(let x):
+            copiedToKeychainLabel.text = copiedToKeychainSuccess
+            removedFromDiskLabel.text = removedFromDiskSuccess
+            let alert = pgpKeyPasswordAlert(textFieldDelegate: self, completion: pgpPasswordAlertDismissed)
+            present(alert, animated: true, completion: nil)
+        case let x:
             print(x)
         }
     }
 
     func pgpPasswordAlertDismissed() {
-        performSegue(withIdentifier: "proceedToCloneRepository", sender: self)
+        navigator.navigateToFetchRepository()
     }
 }
 
