@@ -29,7 +29,7 @@ func moveKeyToKeychainThenDelete() -> KeychainResult {
         return .success
     case (let x, .success):
         return x
-    case (.success, let x):
+    case let (.success, x):
         return x
     default:
         return .totalFailure
@@ -49,7 +49,7 @@ fileprivate func addDataToKeychain(from url: URL) -> KeychainResult {
     do {
         let data = try Data(contentsOf: url)
 
-        if (keychain.set(data, forKey: "pgp_private_key")) {
+        if keychain.set(data, forKey: "pgp_private_key") {
             return .success
         } else {
             return .keychainSetFailure
