@@ -22,9 +22,19 @@ class DetectPGPKeyViewController: UIViewController {
     }
 
     override func viewDidAppear(_: Bool) {
-        if getPrivateKeyFromKeychain() != nil {
-            pgpPasswordAlertDismissed()
+        let privateKeyExists = getPrivateKeyFromKeychain() != nil
+        let passwordExists = getPgpKeyPassword() != nil
+
+        if privateKeyExists {
+            if passwordExists {
+                pgpPasswordAlertDismissed()
+            } else {
+                let alert = pgpKeyPasswordAlert(textFieldDelegate: self, completion: pgpPasswordAlertDismissed)
+                present(alert, animated: true)
+            }
         }
+
+
     }
 
     @objc func handleSuccessfulKeyWrite() {
@@ -33,7 +43,7 @@ class DetectPGPKeyViewController: UIViewController {
             copiedToKeychainLabel.text = copiedToKeychainSuccess
             removedFromDiskLabel.text = removedFromDiskSuccess
             let alert = pgpKeyPasswordAlert(textFieldDelegate: self, completion: pgpPasswordAlertDismissed)
-            present(alert, animated: true, completion: nil)
+            present(alert, animated: true)
         case let x:
             print(x)
         }

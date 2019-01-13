@@ -13,7 +13,10 @@ class FileWatcher {
         fsSource.setEventHandler {
             do {
                 let fileHandle = try FileHandle(forReadingFrom: documentsDirectory.appendingPathComponent(filename))
-                fileHandle.readToEndOfFileInBackgroundAndNotify()
+
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { (_) in
+                    fileHandle.readToEndOfFileInBackgroundAndNotify()
+                })
             } catch let e {
                 print(e)
             }
